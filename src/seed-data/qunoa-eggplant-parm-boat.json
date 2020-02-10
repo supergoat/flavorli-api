@@ -1,0 +1,235 @@
+{
+  "id": "1bc18ec6-59ad-4e06-87f4-ac439ce6972b",
+  "createdAt": "2020-02-09T17:40:13.351Z",
+  "author": "Tasty",
+  "name": "Quinoa eggplant parm boat",
+  "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/quinoa-eggplant-parm-boat.png",
+  "preparationTime": 10,
+  "cookingTime": 50,
+  "portions": "4",
+  "difficulty": "2",
+  "ingredients": [
+    {"qty": "2", "name": "Eggplants"},
+    {"qty": "-", "name": "Olive Oil"},
+    {"qty": "-", "name": "Salt"},
+    {"qty": "-", "name": "Pepper"},
+    {"qty": "0.25", "name": "Onion"},
+    {"qty": "3", "name": "Garlic cloves"},
+    {"qty": "0.5 cup", "name": "Quinoa"},
+    {"qty": "1 cup", "name": "Vegetable stock"},
+    {"qty": "approx. 1 cup", "name": "Vegan Mozzarella"},
+    {"qty": "1 cup", "name": "Marinara"}
+  ],
+  "items": [
+    {"qty": "1", "name": "Sheet tray"},
+    {"qty": "1", "name": "Small bowl"},
+    {"qty": "1", "name": "Medium bowl"},
+    {"qty": "4", "name": "Pinch Bowl"},
+    {"qty": "1", "name": "Pot"}
+  ],
+  "steps": [
+    {
+      "no": 1,
+      "type": "MISE_EN_PLACE",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "items": [{"qty": "1", "name": "Pinch Bowl"}],
+      "ingredients": [
+        {"qty": "0.5 tsp", "name": "Salt"},
+        {"qty": "0.5 tsp", "name": "Pepper"}
+      ],
+      "tasks": [
+        "Add 0.5 tsp salt in a pinch bowl",
+        "Add 0.5 tsp pepper in the same pinch bowl and set aside",
+        "You will no longer need the 0.5 tsp"
+      ]
+    },
+    {
+      "no": 2,
+      "type": "MISE_EN_PLACE",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "items": [{"qty": "1", "name": "Pinch Bowl"}],
+      "ingredients": [{"qty": "1 tsp", "name": "Olive oil"}],
+      "tasks": [
+        "Add 1 tsp olive oil in a pinch bowl and set aside",
+        "You will no longer need the tsp"
+      ]
+    },
+    {
+      "no": 3,
+      "type": "MISE_EN_PLACE",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "items": [{"qty": "1", "name": "Pinch Bowl"}],
+      "ingredients": [{"qty": "0.25", "name": "Onion"}],
+      "tasks": ["Finely chop 0.25 onion and set aside in a pinch bowl"]
+    },
+    {
+      "no": 4,
+      "type": "MISE_EN_PLACE",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "items": [{"qty": "1", "name": "Pinch Bowl"}],
+      "ingredients": [{"qty": "3", "name": "Garlic cloves"}],
+      "tasks": ["Finely chop 3 garlic cloves and set aside in a pinch bowl"]
+    },
+    {
+      "no": 5,
+      "type": "MISE_EN_PLACE",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "items": [{"qty": "1", "name": "Small Bowl"}],
+      "ingredients": [{"qty": "0.5 cup", "name": "Quinoa"}],
+      "tasks": ["Measure 0.5 cup quinoa and set aside in a Small bowl"]
+    },
+    {
+      "no": 6,
+      "type": "MISE_EN_PLACE",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "items": [],
+      "ingredients": [],
+      "tasks": ["Preheat oven to 375 F/190 C"]
+    },
+    {
+      "no": 7,
+      "type": "MISE_EN_PLACE",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "items": [
+        {"qty": "1", "name": "Sheet tray"},
+        {"qty": "1", "name": "Medium bowl"}
+      ],
+      "ingredients": [{"qty": "2", "name": "Eggplants"}],
+      "tasks": [
+        "On a cutting board, slice off the stem of the eggplants",
+        "Cut the eggplants in half lengthwise",
+        "Cut or scoop out the middle of the eggplants and set aside in a medium bowl for later use",
+        "Place the eggplants on a sheet tray and set aside",
+        "You will no need the cutting board and knife"
+      ]
+    },
+    {
+      "no": 8,
+      "type": "MISE_EN_PLACE",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "links": [
+        {
+          "from": 7,
+          "heading": "From Step 7",
+          "name": "Scooped eggplant"
+        }
+      ],
+      "items": [],
+      "ingredients": [],
+      "tasks": [
+        "Roughly chop the scooped eggplant and set aside in a medium bowl"
+      ]
+    },
+    {
+      "no": 9,
+      "type": "PREPARATION",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "links": [
+        {"from": 1, "heading": "From Step 1", "name": "Salt and pepper"},
+        {"from": 7, "heading": "From Step 7", "name": "Eggplants"}
+      ],
+      "items": [],
+      "ingredients": [],
+      "tasks": [
+        "Drizzle eggplants with olive oil",
+        "Sprinkle the salt and pepper",
+        "Bake for 10 minutes",
+        "Then remove and set aside"
+      ],
+      "timer": {
+        "id": "9c02bdc8-f1b6-46d6-99d7-001a27de3f65",
+        "name": "Bake eggplants",
+        "minutes": 10,
+        "seconds": 0
+      }
+    },
+    {
+      "no": 10,
+      "type": "PREPARATION",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "links": [{"from": 2, "heading": "From Step 2", "name": "Olive oil"}],
+      "items": [{"qty": "1", "name": "Pot"}],
+      "ingredients": [],
+      "tasks": [
+        "In a pot heat the olive oil over medium heat",
+        "Add the onion and cook until soft"
+      ]
+    },
+    {
+      "no": 11,
+      "type": "PREPARATION",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "links": [
+        {"from": 4, "heading": "From Step 4", "name": "Garlic"},
+        {"from": 4, "heading": "From Step 4", "name": "Quinoa"}
+      ],
+      "items": [],
+      "ingredients": [],
+      "tasks": [
+        "Add the garlic",
+        "Add the chopped eggplant",
+        "Add the quinoa",
+        "Stir and cook for 2 minutes"
+      ],
+      "timer": {
+        "id": "dbcf455a-069b-4ba8-99d1-de61d07a4ac7",
+        "name": "Cook quinoa",
+        "minutes": 2,
+        "seconds": 0
+      }
+    },
+    {
+      "no": 12,
+      "type": "PREPARATION",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "links": [],
+      "items": [],
+      "ingredients": [{"qty": "1 cup", "name": "Vegetable broth"}],
+      "tasks": [
+        "Add the vegetable broth",
+        "Bring pot to a boil",
+        "Cover and reduce heat to a simmer for 15 minutes"
+      ],
+      "timer": {
+        "id": "d084963e-c937-4f0d-93ff-a004bf42f36b",
+        "name": "Simmer Filling",
+        "minutes": 15,
+        "seconds": 0
+      }
+    },
+    {
+      "no": 11,
+      "type": "PREPARATION",
+      "tag": {"text": "Marinara", "color": "tagRed"},
+      "links": [
+        {
+          "from": 7,
+          "heading": "From Step 7",
+          "name": "Eggplants",
+          "timerId": "9c02bdc8-f1b6-46d6-99d7-001a27de3f65"
+        },
+        {
+          "from": 10,
+          "heading": "From Step 10",
+          "name": "Simmer Filling",
+          "timerId": "d084963e-c937-4f0d-93ff-a004bf42f36b"
+        }
+      ],
+      "items": [],
+      "ingredients": [{"qty": "1 cup", "name": "Vegan shredded mozzarella"}],
+      "tasks": [
+        "Evenly fill the eggplants with the filling",
+        "Cover eggplant tops with the cheese",
+        "Spread the marinara on top",
+        "Sprinkle with more cheese",
+        "Bake for 20-25 minutes, or until the cheese is melted"
+      ],
+      "timer": {
+        "id": "efd80adf-c010-4949-9de7-26a5873d5a42",
+        "name": "Bake Eggplants",
+        "minutes": 25,
+        "seconds": 0
+      }
+    }
+  ]
+}

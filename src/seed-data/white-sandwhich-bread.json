@@ -1,0 +1,304 @@
+{
+  "id": "da9c9933-d913-478b-a5ce-36715e193c87",
+  "createdAt": "2020-01-19T20:06:42.873Z",
+  "author": "Bianca Haun",
+  "name": "White Sandwhich Bread",
+  "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/WhiteSandwhichBread.jpg",
+  "preparationTime": 15,
+  "cookingTime": 25,
+  "portions": "1",
+  "difficulty": "1",
+  "ingredients": [
+    {
+      "qty": "4 cups",
+      "name": "all-purpose flour"
+    },
+    {
+      "qty": "2 tsps",
+      "name": "instant yeast"
+    },
+    {
+      "qty": "3 tsps",
+      "name": "salt"
+    },
+    {
+      "qty": "1 tbsp",
+      "name": "olive oil"
+    },
+
+    {
+      "qty": "1 1/4 cup",
+      "name": "lukewarm water"
+    },
+    {
+      "qty": "1 tsp",
+      "name": "coconul oil (or olive oil)"
+    }
+  ],
+  "items": [
+    {
+      "qty": "1",
+      "name": "Cup"
+    },
+    {
+      "qty": "1/4",
+      "name": "Cup"
+    },
+    {
+      "qty": "1",
+      "name": "tablespoon"
+    },
+    {
+      "qty": "1",
+      "name": "teaspoon"
+    },
+    {
+      "qty": "1",
+      "name": "Baking Pan"
+    }
+  ],
+  "steps": [
+    {
+      "no": 1,
+      "type": "MISE_EN_PLACE",
+      "tag": {
+        "text": "Dough",
+        "color": "tagRed"
+      },
+      "items": [
+        {
+          "qty": "1",
+          "name": "Pinch Bowl"
+        },
+        {
+          "qty": "1",
+          "name": "Small Bowl"
+        }
+      ],
+      "ingredients": [
+        {
+          "qty": "1 tbsp",
+          "name": "olive oil"
+        },
+        {
+          "qty": "1 1/4 cup",
+          "name": "lukewarm water"
+        }
+      ],
+      "tasks": [
+        "Add 1 tbsp olive oil in a pinch bowl and set aside",
+        "Add 1 1/4 cup of hot water in a small bowl and set aside to cool until its lukewarm"
+      ],
+      "images": []
+    },
+    {
+      "no": 2,
+      "type": "MISE_EN_PLACE",
+      "tag": {
+        "text": "Dough",
+        "color": "tagRed"
+      },
+      "items": [
+        {
+          "qty": "1",
+          "name": "Pinch Bowl"
+        }
+      ],
+      "ingredients": [
+        {
+          "qty": "1/2 tsp",
+          "name": "coconul oil (or olive oil)"
+        }
+      ],
+      "tasks": [
+        "Add 1/2 tsp coconut oil (or olive oil) in a pinch bowl and set aside"
+      ],
+      "images": []
+    },
+    {
+      "no": 3,
+      "type": "MISE_EN_PLACE",
+      "tag": {
+        "text": "Dough",
+        "color": "tagRed"
+      },
+      "items": [
+        {
+          "qty": "1",
+          "name": "Pinch Bowl"
+        }
+      ],
+      "ingredients": [
+        {
+          "qty": "1/2 tsp",
+          "name": "coconul oil (or olive oil)"
+        }
+      ],
+      "tasks": [
+        "Add 1/2 tsp coconut oil (or olive oil) in a pinch bowl and set aside"
+      ],
+      "images": []
+    },
+    {
+      "no": 4,
+      "type": "MISE_EN_PLACE",
+      "tag": {
+        "text": "Dough",
+        "color": "tagRed"
+      },
+      "items": [
+        {
+          "qty": "1",
+          "name": "Large Bowl"
+        }
+      ],
+      "ingredients": [
+        {
+          "qty": "4 cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "2 tsps",
+          "name": "instant yeast"
+        },
+        {
+          "qty": "3 tsps",
+          "name": "salt"
+        }
+      ],
+      "tasks": [
+        "Add 4 cups of all-purpose flour in a large bowl",
+        "Add 2 tsps instant yeast",
+        "Add 3 tsp salt",
+        "Mix well"
+      ],
+      "images": []
+    },
+    {
+      "no": 5,
+      "type": "PREPARATION",
+      "tag": {
+        "text": "Dough",
+        "color": "tagRed"
+      },
+      "items": [
+        {
+          "qty": "1",
+          "name": "Large Bowl"
+        }
+      ],
+      "ingredients": [
+        {
+          "qty": "1 tbsp",
+          "name": "olive oil"
+        },
+        {
+          "qty": "1 1/4 cup",
+          "name": "lukewarm water"
+        }
+      ],
+      "tasks": [
+        "Make a hole in the middle of the flour mixture",
+        "Add the olive oil",
+        "Add the lukewarm water",
+        "Knead by hand until the dough feels soft"
+      ],
+      "images": []
+    },
+
+    {
+      "no": 5,
+      "type": "PREPARATION",
+      "tag": {
+        "text": "dough",
+        "color": "tagRed"
+      },
+      "items": [
+        {
+          "qty": "1",
+          "name": "Baking Pan"
+        }
+      ],
+      "ingredients": [
+        {
+          "qty": "1/2 tsp",
+          "name": "coconul oil (or olive oil)"
+        }
+      ],
+      "tasks": [
+        "Pur the coconut oil (or olive oil) in the baking pan and spread it so the dough won't stick to the baking pan"
+      ],
+      "images": []
+    },
+
+    {
+      "no": 6,
+      "type": "PREPARATION",
+      "tag": {
+        "text": "dough",
+        "color": "tagRed"
+      },
+      "links": [{"from": 5, "heading": "From Step 5", "name": "Dough"}],
+      "items": [],
+      "ingredients": [],
+      "tasks": ["Fill the dough in the baking pan"],
+
+      "images": []
+    },
+
+    {
+      "no": 6,
+      "type": "PREPARATION",
+      "tag": {
+        "text": "dough",
+        "color": "tagRed"
+      },
+      "items": [],
+      "ingredients": [],
+      "tasks": [
+        "Cover the baking pan under a clean kitchen towel (to prevent it from drying out)",
+        "Let it rise until it doubles in size for about 2 hours"
+      ],
+      "timer": {
+        "id": "7da628df-dff8-468e-98e4-0a025ae20176",
+        "name": "Step 6: Rise",
+        "minutes": 120,
+        "seconds": 0
+      },
+      "images": []
+    },
+    {
+      "no": 7,
+      "type": "PREPARATION",
+      "tag": {
+        "text": "dough",
+        "color": "tagRed"
+      },
+      "items": [],
+      "ingredients": [],
+      "tasks": ["Preheat the oven to 200 °C / 400 °F"],
+      "images": []
+    },
+    {
+      "no": 8,
+      "type": "PREPARATION",
+      "tag": {
+        "text": "dough",
+        "color": "tagRed"
+      },
+      "items": [],
+      "ingredients": [],
+      "tasks": [
+        "Put the bread in the oven and take it out when the surface is golden. This should take about 25 minutes (but it really depends on the oven)",
+        "Knock on the top or bottom of the bread and when it sounds hollow it's done!"
+      ],
+      "timer": {
+        "id": "03aa658b-b3a1-490e-8982-26a51721c4ea",
+        "name": "Step 6: Baking",
+        "minutes": 30,
+        "seconds": 0
+      },
+      "images": []
+    }
+  ]
+}

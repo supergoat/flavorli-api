@@ -1,0 +1,141 @@
+service: flavorli
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: eu-west-2
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 4000
+  dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8000
+      migrate: true
+      inMemory: true
+      seed: true
+    seed:
+      test:
+        sources:
+          - table: ${self:service}-${self:provider.stage}-Recipes
+            sources: [src/seed-data/Recipes.json]
+functions:
+  graphql:
+    handler: dist/index.graphqlHandler
+    role: FlavorliLambdaRole
+    events:
+      - http:
+          path: graphql
+          method: post
+          cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: FlavorliApiGatewayAuthorizer
+      - http:
+          path: graphql
+          method: get
+          cors: true
+
+resources:
+  Resources:
+    FlavorliBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: flavorli-bucket
+        WebsiteConfiguration:
+          IndexDocument: index.html
+
+    FlavorliBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket:
+          Ref: 'FlavorliBucket'
+        PolicyDocument:
+          Statement:
+            - Effect: 'Allow'
+              Principal: '*'
+              Action:
+                - 's3:GetObject'
+              Resource:
+                Fn::Join:
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - Ref: 'FlavorliBucket'
+                    - '/*'
+
+    FlavorliCognitoUserPool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        UserPoolName: Flavorli
+
+    FlavorliCognitoUserPoolClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: FlavorliWebApp
+        GenerateSecret: false
+        UserPoolId:
+          Ref: 'FlavorliCognitoUserPool'
+
+    RecipeTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:service}-${self:provider.stage}-Recipes
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+          - AttributeName: createdAt
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+          - AttributeName: createdAt
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+    FlavorliLambdaRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: FlavorliLambda
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+              Action: sts:AssumeRole
+
+    FlavorliApiGatewayAuthorizer:
+      Type: AWS::ApiGateway::Authorizer
+      Properties:
+        Name: Flavorli
+        RestApiId:
+          Ref: ApiGatewayRestApi
+        Type: COGNITO_USER_POOLS
+        ProviderARNs:
+          - Fn::GetAtt: [FlavorliCognitoUserPool, Arn]
+        IdentitySource: method.request.header.Authorization
+
+  Outputs:
+    FlavorliBucketURL:
+      Description: 'FlavorliBucket Website URL'
+      Value:
+        'Fn::GetAtt': [FlavorliBucket, WebsiteURL]
+    FlavorliCognitoUserPoolId:
+      Description: 'Flavorli Cognito User Pool ID'
+      Value:
+        Ref: 'FlavorliCognitoUserPool'
+    FlavorliCognitoUserPoolClientId:
+      Description: 'Flavorli Cognito User Pool Client ID'
+      Value:
+        Ref: 'FlavorliCognitoUserPoolClient'

@@ -1,0 +1,1068 @@
+[
+  {
+    "id": "3ae3d4a0-0c15-492a-84e3-d56751b1325e",
+    "createdAt": "2020-02-10T21:32:09.099Z",
+    "author": "Tasty",
+    "name": "Vegan Mac 'n' Cheese",
+    "image": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_serve_2.png",
+    "preparationTime": 10,
+    "cookingTime": 45,
+    "portions": "4",
+    "difficulty": "1",
+    "ingredients": [
+      {"qty": "2", "name": "potatoes"},
+      {"qty": "1", "name": "medium carrot"},
+      {"qty": "1", "name": " medium onion"},
+      {"qty": "0.5 cup (65 g)", "name": "cashews"},
+      {"qty": "1 tsp", "name": "garlic powder"},
+      {"qty": "1 tsp", "name": "onion powder"},
+      {"qty": "1 tsp", "name": "salt"},
+      {"qty": "to taste", "name": "salt"},
+      {"qty": "2 tbsps", "name": "nutritional yeast"},
+      {"qty": "450 g", "name": " macaroni"}
+    ],
+    "items": [
+      {"qty": "2", "name": "large bowl"},
+      {"qty": "1", "name": "small bowl"},
+      {"qty": "1", "name": "pinch bowl"},
+      {"qty": "2", "name": "large pot"},
+      {
+        "qty": "-",
+        "name": "Blender"
+      }
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "For the macaroni",
+          "color": "tagRed"
+        },
+        "links": [],
+        "items": [
+          {
+            "qty": "1",
+            "name": "large pot"
+          }
+        ],
+        "ingredients": [],
+        "tasks": ["Place a pot of water on high heat and set aside to boil"],
+        "images": []
+      },
+      {
+        "no": 2,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "For the cheese",
+          "color": "tagRed"
+        },
+        "links": [],
+        "items": [
+          {
+            "qty": "1",
+            "name": "large Pot"
+          }
+        ],
+        "ingredients": [],
+        "tasks": [
+          "Place another pot of water on high heat and set aside to boil"
+        ],
+        "images": []
+      },
+      {
+        "no": 3,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the macaroni", "color": "tagRed"},
+        "items": [
+          {
+            "qty": "1",
+            "name": "large bowl"
+          }
+        ],
+        "ingredients": [{"qty": "450 g", "name": "Macaroni"}],
+        "tasks": ["Measure 450 g macaroni and set aside in a large bowl"],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_macaroni.jpeg"
+          }
+        ]
+      },
+      {
+        "no": 4,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the cheese", "color": "tagRed"},
+        "items": [{"qty": "1", "name": "small bowl"}],
+        "ingredients": [{"qty": "0.5 cup (65 g)", "name": "cashews"}],
+        "tasks": [
+          "Add 0.5 cup (65 g) of cashews in a small bowl and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_cashews.jpeg"
+          }
+        ]
+      },
+      {
+        "no": 5,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the cheese", "color": "tagRed"},
+        "items": [{"qty": "1", "name": "pinch bowl"}],
+        "ingredients": [
+          {"qty": "1 tsp", "name": "garlic powder"},
+          {"qty": "1 tsp", "name": "onion powder"},
+          {"qty": "1 tsp", "name": "salt"},
+          {"qty": "2 tbsps", "name": "nutritional yeast"}
+        ],
+        "tasks": [
+          "Add 1 tsp garlic powder in a pinch bowl",
+          "Add 1 tsp onion powder in the same pinch bowl",
+          "Add 1 tsp salt in the same pinch bowl",
+          "Add 2 tbsps nutritional yeast in the same pinch bowl and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_nutritional_yeast.jpeg"
+          }
+        ]
+      },
+      {
+        "no": 6,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the cheese", "color": "tagRed"},
+        "items": [
+          {
+            "qty": "1",
+            "name": "large bowl"
+          }
+        ],
+        "ingredients": [
+          {"qty": "2", "name": "potatoes"},
+          {"qty": "1", "name": "medium carrot"},
+          {"qty": "1", "name": "potatoes"}
+        ],
+        "tasks": [
+          "Peel 2 potatoes and cut them into cubes. Set aside in a bowl",
+          "Peel 1 carrot and slice into medium pieces. Set aside in the same bowl",
+          "Peel 1 onion and cut into 4 pieces. Set aside in the same bowl"
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_potatoes_1.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_potatoes_2.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_potatoes_3.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_potatoes_4.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_potatoes_5.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_potatoes_6.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_carrot_1.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_carrot_2.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_carrot_3.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_carrot_4.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_onion_1.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_onion_2.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_onion_3.png",
+            "alt": "alt text"
+          },
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_onion_4.png",
+            "alt": "alt text"
+          }
+        ]
+      },
+      {
+        "no": 7,
+        "type": "PREPARATION",
+        "tag": {"text": "For the macaroni", "color": "tagRed"},
+        "links": [
+          {"from": 1, "heading": "From Step 1", "name": "Boiling water"},
+          {"from": 3, "heading": "From Step 3", "name": "Macaroni"}
+        ],
+        "items": [],
+        "ingredients": [],
+        "tasks": [
+          "In the pot with boiling water, add salt",
+          "Add the macaroni",
+          "Lower the heat to medium",
+          "Boil for ten minutes"
+        ],
+        "timer": {
+          "id": "48ad268c-c04a-4c0f-afc6-287de563e267",
+          "name": "Vegetables",
+          "minutes": 10,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 8,
+        "type": "PREPARATION",
+        "tag": {"text": "For the cheese", "color": "tagRed"},
+        "links": [
+          {"from": 2, "heading": "From Step 2", "name": "Boiling water"},
+          {"from": 6, "heading": "From Step 6", "name": "Vegetables"}
+        ],
+        "items": [],
+        "ingredients": [],
+        "tasks": [
+          "In the other pot with boiling water, add salt",
+          "Add the vegetables",
+          "Lower the heat to medium",
+          "Cover and simmer for 10 minutes or until the potatoes are fork tender (you can insert a fork without resistance)"
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_vegetables.png",
+            "alt": "Reserved water"
+          }
+        ],
+        "timer": {
+          "id": "8543afd0-2987-4a0a-bc3e-ef19768bee6a",
+          "name": "Vegetables",
+          "minutes": 10,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 9,
+        "type": "PREPARATION",
+        "tag": {"text": "For the macaroni", "color": "tagRed"},
+        "links": [
+          {
+            "from": 7,
+            "heading": "From Step 7",
+            "name": "Macaroni",
+            "timerId": "48ad268c-c04a-4c0f-afc6-287de563e267"
+          }
+        ],
+        "items": [],
+        "ingredients": [],
+        "tasks": ["Drain the macaroni and leave it inside the pot"]
+      },
+      {
+        "no": 10,
+        "type": "PREPARATION",
+        "tag": {"text": "For the cheese", "color": "tagRed"},
+        "links": [
+          {
+            "from": 8,
+            "heading": "From Step 8",
+            "name": "Vegetables",
+            "timerId": "48ad268c-c04a-4c0f-afc6-287de563e267"
+          }
+        ],
+        "items": [],
+        "ingredients": [],
+        "tasks": [
+          "From the pot with the vegetables save 1.5 cups of the cooking water",
+          "Drain the remaining water and set the vegetables aside"
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_vegetable_water.png",
+            "alt": "Reserved water"
+          }
+        ]
+      },
+      {
+        "no": 11,
+        "type": "PREPARATION",
+        "tag": {"text": "For the cheese", "color": "tagRed"},
+        "links": [
+          {"from": 4, "heading": "From Step 4", "name": "Cashews"},
+          {
+            "from": 10,
+            "heading": "From Step 10",
+            "name": "Reserved water and vegetables"
+          },
+          {
+            "from": 5,
+            "heading": "From Step 5",
+            "name": "Onion powder, garlic powder and nutrional yeast"
+          }
+        ],
+        "items": [
+          {
+            "qty": "1",
+            "name": "Blender"
+          }
+        ],
+        "ingredients": [],
+        "tasks": [
+          "In a blender cup, add the cashews",
+          "Add the vegetables",
+          "Add the reserved water",
+          "Add the onion powder, garlic powder and nutrional yeast",
+          "Blend until smooth for about 1 minute"
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_blender_5.png",
+            "alt": "Blender"
+          }
+        ],
+        "timer": {
+          "id": "8a389974-dcf3-4604-a2c6-a17eac78ce42",
+          "name": "Vegetables",
+          "minutes": 1,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 12,
+        "type": "PREPARATION",
+        "tag": {"text": "For the cheese", "color": "tagRed"},
+        "links": [
+          {
+            "from": 9,
+            "heading": "From Step 9",
+            "name": "Macaroni"
+          },
+          {
+            "from": 11,
+            "heading": "From Step 11",
+            "name": "Cheese"
+          }
+        ],
+        "items": [],
+        "ingredients": [],
+        "tasks": [
+          "Pour the sauce over the macaroni in the pot",
+          "Stir well until all the macaroni are well coated"
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_cheese.png",
+            "alt": "Mac 'n' cheese "
+          }
+        ]
+      },
+      {
+        "no": 13,
+        "type": "PREPARATION",
+        "tag": {"text": "For Serving", "color": "tagRed"},
+        "items": [],
+        "ingredients": [
+          {
+            "qty": "to taste",
+            "name": "Paprika"
+          }
+        ],
+        "tasks": [
+          "Serve the mac 'n' cheese in a bowl",
+          "Sprinkle with some paprika and serve immediately",
+          "enjoy"
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/mac_n_cheese_serve_2.png",
+            "alt": "Mac 'n' cheese served with paprika"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "d69fec4b-0eb5-425c-a807-6a1022bc34d1",
+    "createdAt": "2020-01-19T11:44:42.873Z",
+    "author": "Martha Stewart",
+    "name": "Chocolate Cake",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/chocolate_cake.jpg",
+    "preparationTime": 25,
+    "cookingTime": 40,
+    "portions": "6-8",
+    "difficulty": "1",
+    "ingredients": [
+      {
+        "qty": "1 cup",
+        "name": "water"
+      },
+      {
+        "qty": "1/2 cup",
+        "name": "unsweetened cocoa powder"
+      },
+      {
+        "qty": "1 1/2 cup",
+        "name": "all-purpose flour"
+      },
+      {
+        "qty": "1 cup",
+        "name": "sugar"
+      },
+      {
+        "qty": "3/4 tsp",
+        "name": "bicarbonate soda"
+      },
+      {
+        "qty": "1/2 tsp",
+        "name": "salt"
+      },
+      {
+        "qty": "1/2 cup",
+        "name": "sunflower oil"
+      },
+      {
+        "qty": "1 tsp",
+        "name": "vanilla extract"
+      },
+      {
+        "qty": "2 tsp",
+        "name": "white vinegar"
+      },
+      {
+        "qty": "55 g",
+        "name": "dark chocolate (preferably at least 70 percent cacao), finely chopped"
+      },
+      {
+        "qty": "1/2 cup",
+        "name": "confectioners' sugar, sifted"
+      },
+      {
+        "qty": "2",
+        "name": "tablespoons water"
+      }
+    ],
+    "items": [
+      {
+        "qty": "1",
+        "name": "Small Bowl"
+      },
+      {
+        "qty": "1",
+        "name": "Large Bowl"
+      },
+      {
+        "qty": "1",
+        "name": "8-inch round cake pan with spray"
+      },
+      {
+        "qty": "1",
+        "name": "Hand Whisk"
+      }
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Large Bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1 1/2 cup",
+            "name": "all-purpose flour"
+          },
+          {
+            "qty": "1 cup",
+            "name": "sugar"
+          },
+          {
+            "qty": "3/4 tsp",
+            "name": "bicarbonate soda"
+          },
+          {
+            "qty": "1/2 tsp",
+            "name": "salt"
+          }
+        ],
+        "tasks": [
+          "Add 1 1/2 cup of all-purpose flour in a large bowl",
+          "Add 1 cup of sugar",
+          "Add 3/4 tsp bicarbonate soda",
+          "Add 1/2 tsp salt",
+          "Mix well and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/flour_mixture_1.jpeg",
+            "alt": "flour mixture 1"
+          },
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/flour_mixture_2.jpeg",
+            "alt": "flour mixture 2"
+          }
+        ]
+      },
+      {
+        "no": 2,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Glass"
+          },
+          {
+            "qty": "1",
+            "name": "Pinch Bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1/2 cup",
+            "name": "sunflower oil"
+          },
+          {
+            "qty": "1 tsp",
+            "name": "vanilla extract"
+          }
+        ],
+
+        "tasks": [
+          "Add 1/2 cup sunflower oil in a glass and set aside",
+          "Add 1 tsp vanilla extract in a pinch bowl set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/oil.jpeg",
+            "alt": "sunflower oil"
+          },
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/vanilla_extract.jpeg",
+            "alt": "vanilla extract"
+          }
+        ]
+      },
+      {
+        "no": 3,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Pinch Bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "2 tsp",
+            "name": "white vinegar"
+          }
+        ],
+
+        "tasks": ["Add 2 tsp white vinegar in a pinch bowl and set aside"],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/white_vinegar.jpeg",
+            "alt": "white vinegar"
+          }
+        ]
+      },
+      {
+        "no": 4,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Small Bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1/2 cup",
+            "name": "unsweetened cocoa powder"
+          }
+        ],
+        "tasks": [
+          "Add 1/2 cup unsweetened cocoa powder in a small bowl and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cocoa_powder.jpeg",
+            "alt": "Cocoa Powder"
+          }
+        ]
+      },
+      {
+        "no": 5,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+
+        "items": [
+          {
+            "qty": "1",
+            "name": "Small Bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1 cup",
+            "name": "water"
+          }
+        ],
+        "tasks": [
+          "Warm 1 cup of water and pour it in the bowl with the cocoa powder",
+          "Mix until dissolved"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cocoa_mixture.jpeg",
+            "alt": "cocoa mixture"
+          }
+        ]
+      },
+      {
+        "no": 6,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "tasks": [
+          "Pre heat the oven at 180 degrees,  (or 160 degrees if fan oven)"
+        ],
+        "ingredients": [],
+        "items": [],
+        "images": []
+      },
+      {
+        "no": 7,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+        "links": [
+          {
+            "from": 5,
+            "heading": "From Step 5",
+            "name": "Cocoa and water mixture"
+          }
+        ],
+        "items": [],
+        "ingredients": [
+          {
+            "qty": "1/2 cup",
+            "name": "sunflower oil"
+          },
+          {
+            "qty": "1 tsp",
+            "name": "vanilla extract"
+          }
+        ],
+        "tasks": [
+          "Make a hole in the middle of the flour mixture",
+          "Add the oil",
+          "Add the cocoa mixture",
+          "Add the vanilla extract",
+          "Mix until homogeneous"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/hole.jpeg",
+            "alt": "hole"
+          },
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cake_mixture.jpeg",
+            "alt": "Cake mixture"
+          }
+        ]
+      },
+      {
+        "no": 8,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "8-inch round cake pan with spray"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "2 tsp",
+            "name": "white vinegar"
+          }
+        ],
+
+        "tasks": [
+          "Add the white vinegar",
+          "Mix just until combined",
+          "Then immediately pour the mixture into the cake pan"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cake.jpeg",
+            "alt": "Cake"
+          }
+        ]
+      },
+      {
+        "no": 9,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "tasks": [
+          "Bake until inserting a knife in the cake center comes out clean"
+        ],
+        "ingredients": [],
+        "items": [],
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": "0216341c-7d28-433f-8a87-42218d8a5452",
+    "createdAt": "2020-01-19T19:37:42.873Z",
+    "author": "Robin Robertson",
+    "name": "Cherry Berry Smoothie",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/CherryBerrySmoothie.jpeg",
+    "preparationTime": 7,
+    "cookingTime": 0,
+    "portions": "1",
+    "difficulty": "1",
+    "ingredients": [
+      {
+        "qty": "1 cup/100 g",
+        "name": "Frozen Blueberries"
+      },
+      {
+        "qty": "1/2 cup/110 g",
+        "name": "fresh or frozen pitted cherries"
+      },
+      {
+        "qty": "1",
+        "name": "frozen ripe banana, cut into chunks before freezing"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "ground flaxseeds (or linseeds)"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "almond butter (or peanut butter)"
+      },
+      {
+        "qty": "1 cup/22.5 g",
+        "name": "raw spinach leaves"
+      },
+      {
+        "qty": "1 1/2 cup (360 ml)",
+        "name": "water"
+      }
+    ],
+    "items": [
+      {
+        "qty": "1",
+        "name": "Blender"
+      },
+      {
+        "qty": "1",
+        "name": "Cup"
+      },
+      {
+        "qty": "1/2",
+        "name": "cup"
+      },
+      {
+        "qty": "1",
+        "name": "tablespoon"
+      }
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Smoothie",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Blender"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1 cup/100 g",
+            "name": "Frozen Blueberries"
+          },
+          {
+            "qty": "1/2 cup/110 g",
+            "name": "fresh or frozen pitted cherries"
+          },
+          {
+            "qty": "1",
+            "name": "frozen ripe banana, cut into chunks before freezing"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "ground flaxseeds (or linseeds)"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "almond butter (or peanut butter)"
+          },
+          {
+            "qty": "1 cup/22.5 g",
+            "name": "raw spinach leaves"
+          },
+          {
+            "qty": "1 1/2 cup (360 ml)",
+            "name": "water"
+          }
+        ],
+        "tasks": [
+          "Add 1 cup/100 g Frozen Blueberries in a blender",
+          "Add 1/2 cup/110 g fresh or frozen pitted cherries",
+          "Add 1 frozen ripe banana, cut into chunks before freezing",
+          "Add 1 tbsp ground flaxseeds (or linseeds)",
+          "Add 1 tbsp almond butter (or peanut butter)",
+          "Add 1 cup/22.5 g raw spinach leaves",
+          "Add 1 1/2 cup cup (360 ml) water"
+        ],
+        "images": []
+      },
+      {
+        "no": 2,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Smoothie",
+          "color": "tagRed"
+        },
+        "items": [],
+        "ingredients": [],
+        "tasks": [
+          "Blend all the ingredients until smooth and creamy for about 1 minute",
+          "Add more water if you prefer a thinner consistency",
+          "Serve immediately"
+        ],
+        "timer": {
+          "id": "ce739171-8fac-4cfe-a367-d513ab74b0dc",
+          "name": "Step 2: Blend",
+          "minutes": 1,
+          "seconds": 0
+        },
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": "ecd040e7-08b4-454e-94e1-2a910342d4f0",
+    "createdAt": "2020-01-19T20:06:42.873Z",
+    "author": "Robin Robertson",
+    "name": "Banana-Chocolate Smoothie",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/BananaChocolateSmoothie.jpeg",
+    "preparationTime": 7,
+    "cookingTime": 0,
+    "portions": "1",
+    "difficulty": "1",
+    "ingredients": [
+      {
+        "qty": "1",
+        "name": "frozen ripe banana, cut into chunks before freezing"
+      },
+      {
+        "qty": "1/2 cup/35 g",
+        "name": "Frozen Blueberries"
+      },
+      {
+        "qty": "2 tbps",
+        "name": "unsweetened cocoa powder"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "ground flaxseeds (or linseeds)"
+      },
+      {
+        "qty": "1/2 tsp",
+        "name": "vanilla extract"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "almond butter (or peanut butter)"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "sugar (optional, depending on the sweetness of the fruit)"
+      },
+      {
+        "qty": "1 cup/22.5 g",
+        "name": "raw spinach leaves"
+      },
+      {
+        "qty": "3 to 4",
+        "name": "ice cubes (optional)"
+      },
+      {
+        "qty": "1 1/2 cup (360 ml)",
+        "name": "water"
+      }
+    ],
+    "items": [
+      {
+        "qty": "1",
+        "name": "Blender"
+      },
+      {
+        "qty": "1",
+        "name": "Cup"
+      },
+      {
+        "qty": "1/2",
+        "name": "cup"
+      },
+      {
+        "qty": "1",
+        "name": "tablespoon"
+      },
+      {
+        "qty": "1",
+        "name": "teaspoon"
+      }
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Smoothie",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Blender"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1",
+            "name": "frozen ripe banana, cut into chunks before freezing"
+          },
+          {
+            "qty": "1/2 cup/35 g",
+            "name": "Frozen Blueberries"
+          },
+          {
+            "qty": "2 tbps",
+            "name": "unsweetened cocoa powder"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "ground flaxseeds (or linseeds)"
+          },
+          {
+            "qty": "1/2 tsp",
+            "name": "vanilla extract"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "almond butter (or peanut butter)"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "sugar (optional, depending on the sweetness of the fruit)"
+          },
+          {
+            "qty": "1 cup/22.5 g",
+            "name": "raw spinach leaves"
+          },
+          {
+            "qty": "3 to 4",
+            "name": "ice cubes (optional)"
+          },
+          {
+            "qty": "1 1/2 cup (360 ml)",
+            "name": "water"
+          }
+        ],
+        "tasks": [
+          "Add 1 frozen ripe banana, cut into chunks before freezing in a blender",
+          "Add 1/2 cup/35 g Frozen Blueberries",
+          "Add 2 tbsps unsweetened cocoa powder",
+          "Add 1 tbsp ground flaxseeds (or linseeds)",
+          "Add 1 tsp vanilla extract",
+          "Add 1 tbsp almond butter (or peanut butter)",
+          "Add 1 tbsp sugar (optional, depending on the sweetness of the fruit)",
+          "Add 1 cup/22.5 g raw spinach leaves",
+          "Add 3 to 4 ice cubes (optional)",
+          "Add 1 1/2 cup cup (360 ml) water"
+        ],
+        "images": []
+      },
+      {
+        "no": 2,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Smoothie",
+          "color": "tagRed"
+        },
+        "items": [],
+        "ingredients": [],
+        "tasks": [
+          "Blend all the ingredients until thick and smooth for about 1 minute",
+          "For thinner texture, add less ice (if using) or more water",
+          "Serve immediately"
+        ],
+        "timer": {
+          "id": "1650eae6-a535-427b-89f3-c137b87e91aa",
+          "name": "Step 2: Blend",
+          "minutes": 1,
+          "seconds": 0
+        },
+        "images": []
+      }
+    ]
+  }
+]
