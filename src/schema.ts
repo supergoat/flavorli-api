@@ -14,11 +14,15 @@ export const schema = `
   input IngredientInput {
     qty: String!
     name: String!
+    notes: String
+    link: String
   }
 
   input ItemInput {
     qty: String!
     name: String!
+    notes: String
+    link: String
   }
 
   input LinkInput {
@@ -75,11 +79,16 @@ export const schema = `
   type Ingredient {
     qty: String
     name: String
+    notes: String
+    link: String
+    from: Int
   }
 
   type Item {
     qty: String
     name: String
+    notes: String
+    link: String
   }
 
   enum StepType {

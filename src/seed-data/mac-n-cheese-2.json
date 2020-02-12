@@ -17,17 +17,43 @@
     {"qty": "1 tsp", "name": "onion powder"},
     {"qty": "1 tsp", "name": "salt"},
     {"qty": "to taste", "name": "salt"},
-    {"qty": "2 tbsps", "name": "nutritional yeast"},
+    {
+      "qty": "2 tbsps",
+      "name": "nutritional yeast",
+      "notes": "Nutritional yeast is a great healthy way to add a cheesy flavour",
+      "link": "https://www.hollandandbarrett.com/shop/product/engevita-yeast-flakes-b12-60009142?skuid=009142&utm_campaign=shopping&utm_medium=cpc&utm_source=google&&gclid=Cj0KCQiAm4TyBRDgARIsAOU75soAJl-J5GWhYFl0ro2kbyk63ax17ZzB0VC2lz6btem_zqwuFngTKt4aAs_xEALw_wcB&gclsrc=aw.ds"
+    },
     {"qty": "450 g", "name": " macaroni"}
   ],
   "items": [
-    {"qty": "2", "name": "large bowl"},
-    {"qty": "1", "name": "small bowl"},
-    {"qty": "1", "name": "pinch bowl"},
-    {"qty": "2", "name": "large pot"},
+    {
+      "qty": "2",
+      "name": "large pot"
+    },
     {
       "qty": "-",
-      "name": "Blender"
+      "name": "blender",
+      "notes": "Used to blend the vegetables"
+    },
+    {
+      "qty": "1",
+      "name": "bowl",
+      "notes": "Or similar container to save 1.5 cups of cooking water"
+    },
+    {
+      "qty": "1",
+      "name": "small bowl",
+      "notes": "(Recommended) To weigh the cashews"
+    },
+    {
+      "qty": "2",
+      "name": "large bowl",
+      "notes": "(Recommended) To weigh and hold the macaroni and to hold the vegetables during mise en place"
+    },
+    {
+      "qty": "1",
+      "name": "pinch bowl",
+      "notes": "(Recommended) To add the condiments during mise en place"
     }
   ],
   "steps": [
@@ -220,7 +246,7 @@
       ],
       "timer": {
         "id": "48ad268c-c04a-4c0f-afc6-287de563e267",
-        "name": "Vegetables",
+        "name": "Macaroni",
         "minutes": 10,
         "seconds": 0
       }
@@ -282,7 +308,12 @@
           "timerId": "48ad268c-c04a-4c0f-afc6-287de563e267"
         }
       ],
-      "items": [],
+      "items": [
+        {
+          "qty": "1",
+          "name": "bowl"
+        }
+      ],
       "ingredients": [],
       "tasks": [
         "From the pot with the vegetables save 1.5 cups of the cooking water",
@@ -334,7 +365,7 @@
       ],
       "timer": {
         "id": "8a389974-dcf3-4604-a2c6-a17eac78ce42",
-        "name": "Vegetables",
+        "name": "Cheese Sauce",
         "minutes": 1,
         "seconds": 0
       }

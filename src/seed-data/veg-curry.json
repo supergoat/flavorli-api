@@ -1,0 +1,32 @@
+{
+  "id": "018fdcbd-5ddd-45c7-ad11-40df445f27c8",
+  "createdAt": "2020-01-19T20:06:42.873Z",
+  "author": "James Wythe",
+  "name": "Vegan Mac and Cheese",
+  "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/BananaChocolateSmoothie.jpeg",
+  "preparationTime": 5,
+  "cookingTime": 30,
+  "portions": "4",
+  "difficulty": "1",
+  "ingredients": [
+    {"qty": "2 tsp", "name": "Chopped Garlic Very Lazy"},
+    {"qty": "2 tsp", "name": "Chopped Red Chillies Very Lazy"},
+    {"qty": "1 tbsp", "name": "oil"},
+    {"qty": "1", "name": "red onion roughly sliced"},
+    {"qty": "1 tbsp", "name": "ground coriander"},
+    {"qty": "1", "name": "courgette roughly chopped"},
+    {"qty": "1", "name": "aubergine roughly chopped"},
+    {"qty": "1", "name": "pepper roughly chopped"},
+    {"qty": "1", "name": "400g tin of tomatoes"},
+    {"qty": "1", "name": "400ml tin of coconut milk"},
+    {"qty": "1", "name": "400g tin of chickpeas drained & rinsed"},
+    {"qty": "200 ml", "name": "water (just under 1 cup)"},
+    {"qty": "100 g", "name": "ground almonds roughly 1 cup"},
+    {"qty": " 1", "name": "Lime"},
+    {"qty": "Handful", "name": "fresh coriander (optional)"},
+    {"qty": "Handful", "name": "fresh spinach (optional)"},
+    {"qty": "-", "name": "Salt & pepper"}
+  ],
+  "items": [],
+  "steps": []
+}
