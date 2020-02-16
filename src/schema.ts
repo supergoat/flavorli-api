@@ -9,6 +9,7 @@ export const schema = `
     ingredients: [IngredientInput]
     items: [ItemInput]
     steps: [StepInput]
+    notes: [String]
   }
 
   input IngredientInput {
@@ -56,9 +57,14 @@ export const schema = `
     tag: TagInput
     items: [ItemInput]
     ingredients: [IngredientInput]
-    tasks: [String]
+    tasks: [TaskInput]
     images: [ImageInput]
     timer: TimerInput
+  }
+
+  input TaskInput {
+    name: String!
+    notes: [String]
   }
 
   type Recipe {
@@ -71,6 +77,7 @@ export const schema = `
     cookingTime: Int
     portions: String
     difficulty: String
+    notes: [String]
     ingredients: [Ingredient]
     items: [Item]
     steps: [Step]
@@ -81,7 +88,6 @@ export const schema = `
     name: String
     notes: String
     link: String
-    from: Int
   }
 
   type Item {
@@ -103,9 +109,15 @@ export const schema = `
     tag: Tag
     items: [Item]
     ingredients: [Ingredient]
-    tasks: [String]
+    tasks: [Task]
     images: [Image]
     timer: Timer
+    notes: [String]
+  }
+
+  type Task {
+    name: String!
+    notes: [String]
   }
 
   type Link {

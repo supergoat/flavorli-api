@@ -1,0 +1,1819 @@
+[
+  {
+    "id": "d69fec4b-0eb5-425c-a807-6a1022bc34d1",
+    "createdAt": "2020-01-19T11:44:42.873Z",
+    "author": "Martha Stewart",
+    "name": "Chocolate Cake",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/chocolate_cake.jpg",
+    "preparationTime": 25,
+    "cookingTime": 40,
+    "portions": "6-8",
+    "difficulty": "1",
+    "ingredients": [
+      {
+        "qty": "1 cup",
+        "name": "water"
+      },
+      {
+        "qty": "0.5 cup",
+        "name": "unsweetened cocoa powder"
+      },
+      {
+        "qty": "1.5 cup",
+        "name": "all-purpose flour"
+      },
+      {
+        "qty": "1 cup",
+        "name": "sugar"
+      },
+      {
+        "qty": "0.75 tsp",
+        "name": "bicarbonate soda"
+      },
+      {
+        "qty": "0.5 tsp",
+        "name": "salt"
+      },
+      {
+        "qty": "0.5 cup",
+        "name": "sunflower oil"
+      },
+      {
+        "qty": "1 tsp",
+        "name": "vanilla extract"
+      },
+      {
+        "qty": "2 tsp",
+        "name": "white vinegar"
+      },
+      {
+        "qty": "55 g",
+        "name": "dark chocolate (preferably at least 70 percent cacao), finely chopped"
+      },
+      {
+        "qty": "0.5 cup",
+        "name": "confectioners' sugar, sifted"
+      },
+      {
+        "qty": "2",
+        "name": "tablespoons water"
+      }
+    ],
+    "items": [
+      {
+        "qty": "1",
+        "name": "Small bowl"
+      },
+      {
+        "qty": "1",
+        "name": "large bowl"
+      },
+      {
+        "qty": "1",
+        "name": "8-inch round cake pan with spray"
+      },
+      {
+        "qty": "1",
+        "name": "hand whisk"
+      }
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "large bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1.5 cup",
+            "name": "all-purpose flour"
+          },
+          {
+            "qty": "1 cup",
+            "name": "sugar"
+          },
+          {
+            "qty": "0.75 tsp",
+            "name": "bicarbonate soda"
+          },
+          {
+            "qty": "0.5 tsp",
+            "name": "salt"
+          }
+        ],
+        "tasks": [
+          "Add 1.5 cup of all-purpose flour in a large bowl",
+          "Add 1 cup of sugar",
+          "Add 0.75 tsp bicarbonate soda",
+          "Add 0.5 tsp salt",
+          "Mix well and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/flour_mixture_1.jpeg",
+            "alt": "flour mixture 1"
+          },
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/flour_mixture_2.jpeg",
+            "alt": "flour mixture 2"
+          }
+        ]
+      },
+      {
+        "no": 2,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "glass"
+          },
+          {
+            "qty": "1",
+            "name": "Pinch bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "0.5 cup",
+            "name": "sunflower oil"
+          },
+          {
+            "qty": "1 tsp",
+            "name": "vanilla extract"
+          }
+        ],
+
+        "tasks": [
+          "Add 0.5 cup sunflower oil in a glass and set aside",
+          "Add 1 tsp vanilla extract in a pinch bowl set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/oil.jpeg",
+            "alt": "sunflower oil"
+          },
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/vanilla_extract.jpeg",
+            "alt": "vanilla extract"
+          }
+        ]
+      },
+      {
+        "no": 3,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Pinch bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "2 tsp",
+            "name": "white vinegar"
+          }
+        ],
+
+        "tasks": ["Add 2 tsp white vinegar in a pinch bowl and set aside"],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/white_vinegar.jpeg",
+            "alt": "white vinegar"
+          }
+        ]
+      },
+      {
+        "no": 4,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Small bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "0.5 cup",
+            "name": "unsweetened cocoa powder"
+          }
+        ],
+        "tasks": [
+          "Add 0.5 cup unsweetened cocoa powder in a small bowl and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cocoa_powder.jpeg",
+            "alt": "Cocoa Powder"
+          }
+        ]
+      },
+      {
+        "no": 5,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+
+        "items": [
+          {
+            "qty": "1",
+            "name": "Small bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1 cup",
+            "name": "water"
+          }
+        ],
+        "tasks": [
+          "Warm 1 cup of water and pour it in the bowl with the cocoa powder",
+          "Mix until dissolved"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cocoa_mixture.jpeg",
+            "alt": "cocoa mixture"
+          }
+        ]
+      },
+      {
+        "no": 6,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "tasks": [
+          "Pre heat the oven at 180 degrees,  (or 160 degrees if fan oven)"
+        ],
+        "ingredients": [],
+        "items": [],
+        "images": []
+      },
+      {
+        "no": 7,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+        "links": [
+          {
+            "from": 5,
+            "heading": "From Step 5",
+            "name": "Cocoa and water mixture"
+          }
+        ],
+        "items": [],
+        "ingredients": [
+          {
+            "qty": "0.5 cup",
+            "name": "sunflower oil"
+          },
+          {
+            "qty": "1 tsp",
+            "name": "vanilla extract"
+          }
+        ],
+        "tasks": [
+          "Make a hole in the middle of the flour mixture",
+          "Add the oil",
+          "Add the cocoa mixture",
+          "Add the vanilla extract",
+          "Mix until homogeneous"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/hole.jpeg",
+            "alt": "hole"
+          },
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cake_mixture.jpeg",
+            "alt": "Cake mixture"
+          }
+        ]
+      },
+      {
+        "no": 8,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Cake",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "8-inch round cake pan with spray"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "2 tsp",
+            "name": "white vinegar"
+          }
+        ],
+
+        "tasks": [
+          "Add the white vinegar",
+          "Mix just until combined",
+          "Then immediately pour the mixture into the cake pan"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cake.jpeg",
+            "alt": "Cake"
+          }
+        ]
+      },
+      {
+        "no": 9,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "tasks": [
+          "Bake until inserting a knife in the cake center comes out clean"
+        ],
+        "ingredients": [],
+        "items": [],
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": "0216341c-7d28-433f-8a87-42218d8a5452",
+    "createdAt": "2020-01-19T19:37:42.873Z",
+    "author": "Robin Robertson",
+    "name": "Cherry Berry Smoothie",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/CherryBerrySmoothie.jpeg",
+    "preparationTime": 5,
+    "cookingTime": 1,
+    "portions": "1",
+    "difficulty": "1",
+    "ingredients": [
+      {
+        "qty": "1 cup/100 g",
+        "name": "Frozen Blueberries"
+      },
+      {
+        "qty": "0.5 cup/110 g",
+        "name": "fresh or frozen pitted cherries"
+      },
+      {
+        "qty": "1",
+        "name": "frozen ripe banana, cut into chunks before freezing"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "ground flaxseeds (or linseeds)"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "almond butter (or peanut butter)"
+      },
+      {
+        "qty": "1 cup/22.5 g",
+        "name": "raw spinach leaves"
+      },
+      {
+        "qty": "1.5 cup (360 ml)",
+        "name": "water"
+      }
+    ],
+    "items": [
+      {
+        "qty": "1",
+        "name": "Blender"
+      },
+      {
+        "qty": "1",
+        "name": "Cup"
+      },
+      {
+        "qty": "0.5",
+        "name": "cup"
+      },
+      {
+        "qty": "1",
+        "name": "tbsp"
+      }
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Smoothie",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Blender"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1 cup/100 g",
+            "name": "Frozen Blueberries"
+          },
+          {
+            "qty": "0.5 cup/110 g",
+            "name": "fresh or frozen pitted cherries"
+          },
+          {
+            "qty": "1",
+            "name": "frozen ripe banana, cut into chunks before freezing"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "ground flaxseeds (or linseeds)"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "almond butter (or peanut butter)"
+          },
+          {
+            "qty": "1 cup/22.5 g",
+            "name": "raw spinach leaves"
+          },
+          {
+            "qty": "1.5 cup (360 ml)",
+            "name": "water"
+          }
+        ],
+        "tasks": [
+          "Add 1 cup/100 g Frozen Blueberries in a blender",
+          "Add 0.5 cup/110 g fresh or frozen pitted cherries",
+          "Add 1 frozen ripe banana, cut into chunks before freezing",
+          "Add 1 tbsp ground flaxseeds (or linseeds)",
+          "Add 1 tbsp almond butter (or peanut butter)",
+          "Add 1 cup/22.5 g raw spinach leaves",
+          "Add 1.5 cup cup (360 ml) water"
+        ],
+        "images": []
+      },
+      {
+        "no": 2,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Smoothie",
+          "color": "tagRed"
+        },
+        "items": [],
+        "ingredients": [],
+        "tasks": [
+          "Blend all the ingredients until smooth and creamy for about 1 minute",
+          "Add more water if you prefer a thinner consistency",
+          "Serve immediately"
+        ],
+        "timer": {
+          "id": "ce739171-8fac-4cfe-a367-d513ab74b0dc",
+          "name": "Step 2: Blend",
+          "minutes": 1,
+          "seconds": 0
+        },
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": "ecd040e7-08b4-454e-94e1-2a910342d4f0",
+    "createdAt": "2020-01-19T20:06:42.873Z",
+    "author": "Robin Robertson",
+    "name": "Banana-Chocolate Smoothie",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/BananaChocolateSmoothie.jpeg",
+    "preparationTime": 5,
+    "cookingTime": 1,
+    "portions": "1",
+    "difficulty": "1",
+    "ingredients": [
+      {
+        "qty": "1",
+        "name": "frozen ripe banana, cut into chunks before freezing"
+      },
+      {
+        "qty": "0.5 cup/35 g",
+        "name": "Frozen Blueberries"
+      },
+      {
+        "qty": "2 tbps",
+        "name": "unsweetened cocoa powder"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "ground flaxseeds (or linseeds)"
+      },
+      {
+        "qty": "0.5 tsp",
+        "name": "vanilla extract"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "almond butter (or peanut butter)"
+      },
+      {
+        "qty": "1 tbsp",
+        "name": "sugar (optional, depending on the sweetness of the fruit)"
+      },
+      {
+        "qty": "1 cup/22.5 g",
+        "name": "raw spinach leaves"
+      },
+      {
+        "qty": "3 to 4",
+        "name": "ice cubes (optional)"
+      },
+      {
+        "qty": "1.5 cup (360 ml)",
+        "name": "water"
+      }
+    ],
+    "items": [
+      {
+        "qty": "1",
+        "name": "Blender"
+      },
+      {
+        "qty": "1",
+        "name": "Cup"
+      },
+      {
+        "qty": "0.5",
+        "name": "cup"
+      },
+      {
+        "qty": "1",
+        "name": "tbsp"
+      },
+      {
+        "qty": "1",
+        "name": "tsp"
+      }
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Smoothie",
+          "color": "tagRed"
+        },
+        "items": [
+          {
+            "qty": "1",
+            "name": "Blender"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "1",
+            "name": "frozen ripe banana, cut into chunks before freezing"
+          },
+          {
+            "qty": "0.5 cup/35 g",
+            "name": "Frozen Blueberries"
+          },
+          {
+            "qty": "2 tbps",
+            "name": "unsweetened cocoa powder"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "ground flaxseeds (or linseeds)"
+          },
+          {
+            "qty": "0.5 tsp",
+            "name": "vanilla extract"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "almond butter (or peanut butter)"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "sugar (optional, depending on the sweetness of the fruit)"
+          },
+          {
+            "qty": "1 cup/22.5 g",
+            "name": "raw spinach leaves"
+          },
+          {
+            "qty": "3 to 4",
+            "name": "ice cubes (optional)"
+          },
+          {
+            "qty": "1.5 cup (360 ml)",
+            "name": "water"
+          }
+        ],
+        "tasks": [
+          "Add 1 frozen ripe banana, cut into chunks before freezing in a blender",
+          "Add 0.5 cup/35 g Frozen Blueberries",
+          "Add 2 tbsps unsweetened cocoa powder",
+          "Add 1 tbsp ground flaxseeds (or linseeds)",
+          "Add 1 tsp vanilla extract",
+          "Add 1 tbsp almond butter (or peanut butter)",
+          "Add 1 tbsp sugar (optional, depending on the sweetness of the fruit)",
+          "Add 1 cup/22.5 g raw spinach leaves",
+          "Add 3 to 4 ice cubes (optional)",
+          "Add 1.5 cup cup (360 ml) water"
+        ],
+        "images": []
+      },
+      {
+        "no": 2,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Smoothie",
+          "color": "tagRed"
+        },
+        "items": [],
+        "ingredients": [],
+        "tasks": [
+          "Blend all the ingredients until thick and smooth for about 1 minute",
+          "For thinner texture, add less ice (if using) or more water",
+          "Serve immediately"
+        ],
+        "timer": {
+          "id": "1650eae6-a535-427b-89f3-c137b87e91aa",
+          "name": "Step 2: Blend",
+          "minutes": 1,
+          "seconds": 0
+        },
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": "018fdcbd-5ddd-45c7-ad11-40df445f27c8",
+    "createdAt": "2020-01-19T20:06:42.873Z",
+    "author": "James Wythe",
+    "name": "Vegan Mac and Cheese",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/Vegan-Mac-N-Cheese-with-plate.jpg",
+    "preparationTime": 5,
+    "cookingTime": 30,
+    "portions": "4",
+    "difficulty": "1",
+    "ingredients": [
+      {"qty": "400 g", "name": "macaroni"},
+      {"qty": "100 g", "name": "raw cashews"},
+      {"qty": "300 ml", "name": "plant-based milk"},
+      {"qty": "6 tbsp", "name": "nutritional yeast"},
+      {"qty": "2 tsp", "name": "dijon mustard"},
+      {"qty": "1 tbsp", "name": "olive oil"},
+      {"qty": "-", "name": "salt", "notes": "to taste"},
+      {"qty": "-", "name": "pepper", "notes": "to taste"},
+      {"qty": "-", "name": "vegan grated cheese", "notes": "optional"},
+      {"qty": "-", "name": "paprika", "notes": "for presentation"}
+    ],
+    "items": [
+      {
+        "qty": "1",
+        "name": "Bowl"
+      },
+      {
+        "qty": "1",
+        "name": "Pot"
+      },
+      {
+        "qty": "1",
+        "name": "Blender"
+      },
+      {
+        "qty": "1",
+        "name": "Baking Dish"
+      }
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Pasta",
+          "color": "tagRed"
+        },
+        "links": [],
+        "items": [
+          {
+            "qty": "1",
+            "name": "Pot"
+          }
+        ],
+        "ingredients": [],
+        "tasks": ["Place a pot of water on medium heat and set aside to boil"],
+        "images": []
+      },
+      {
+        "no": 2,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "links": [],
+        "items": [
+          {
+            "qty": "1",
+            "name": "Bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "100 g",
+            "name": "raw cashews"
+          }
+        ],
+        "tasks": [
+          "Place 100g cashews into a bowl and cover with hot water for 5 minutes"
+        ],
+        "images": [],
+        "timer": {
+          "id": "9664758a-6961-4bfe-adb8-9e62289534c8",
+          "name": "Step 2: Soak cashews",
+          "minutes": 5,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 3,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Pasta",
+          "color": "tagRed"
+        },
+        "links": [],
+        "items": [
+          {
+            "qty": "1",
+            "name": "Bowl"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "400 g",
+            "name": "macaroni"
+          }
+        ],
+        "tasks": ["Add 400 g of macaroni to a bowl and set aside"],
+        "images": []
+      },
+      {
+        "no": 4,
+        "type": "MISE_EN_PLACE",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "links": [],
+        "items": [
+          {
+            "qty": "1",
+            "name": "Small Bowl"
+          },
+          {"qty": "3", "name": "Pinch Bowls"}
+        ],
+        "ingredients": [
+          {
+            "qty": "300 ml",
+            "name": "plant-based milk"
+          },
+          {
+            "qty": "6 tbsp",
+            "name": "nutritional yeast"
+          },
+          {
+            "qty": "2 tsp",
+            "name": "dijon mustard"
+          },
+          {
+            "qty": "1 tbsp",
+            "name": "olive oil"
+          }
+        ],
+        "tasks": [
+          "Add 300 ml of plant-based milk into a bowl and set aside",
+          "Add 6 tbsp nutritional yeast in a pinch bowl and set aside",
+          "Add 2 tsp dijon mustard in a pinch bowl and set aside",
+          "Add 1 tbsp olive oil in a pinch bowl and set aside"
+        ],
+        "images": []
+      },
+      {
+        "no": 5,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "links": [],
+        "items": [],
+        "ingredients": [],
+        "tasks": ["Pre-heat your oven to 200C"],
+        "images": []
+      },
+      {
+        "no": 6,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Pasta",
+          "color": "tagRed"
+        },
+        "links": [
+          {"from": 1, "heading": "From Step 1", "name": "Boiling water"},
+          {"from": 3, "heading": "From Step 3", "name": "Macaroni"}
+        ],
+        "items": [],
+        "ingredients": [
+          {
+            "qty": "-",
+            "name": "salt"
+          },
+          {
+            "qty": "400 g",
+            "name": "macaroni"
+          }
+        ],
+        "tasks": [
+          "In the pot with boiling water, add salt",
+          "Add the macaroni",
+          "Boil for ten minutes"
+        ],
+        "images": [],
+        "timer": {
+          "id": "3969d7db-05f5-4ec4-acf3-c678f0078b00",
+          "name": "Step 6: Cook Pasta",
+          "minutes": 10,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 7,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "links": [
+          {
+            "from": 2,
+            "heading": "From Step 2",
+            "name": "Soaked cashews",
+            "timerId": "9664758a-6961-4bfe-adb8-9e62289534c8"
+          }
+        ],
+        "items": [
+          {
+            "qty": "1",
+            "name": "blender"
+          }
+        ],
+        "ingredients": [],
+        "tasks": ["Drain the cashews and add them to a blender cup"],
+        "images": []
+      },
+      {
+        "no": 8,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Sauce",
+          "color": "tagRed"
+        },
+        "links": [
+          {"from": 4, "heading": "From Step 4", "name": "Cheese ingredients"}
+        ],
+        "items": [],
+        "ingredients": [
+          {
+            "qty": "-",
+            "name": "salt"
+          },
+          {
+            "qty": "-",
+            "name": "pepper"
+          }
+        ],
+        "tasks": [
+          "Add the plant-based milk to the blender cup with the cashews",
+          "Add the nutritional yeast",
+          "Add the dijon mustard",
+          "Add the olive oil",
+          "Add a pinch of salt",
+          "Add a pinch of pepper",
+          "Blend until smooth and set aside"
+        ],
+        "images": []
+      },
+      {
+        "no": 9,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Assembling",
+          "color": "tagRed"
+        },
+        "links": [
+          {
+            "from": 6,
+            "heading": "From Step 6",
+            "name": "Cooked Pasta",
+            "timerId": "3969d7db-05f5-4ec4-acf3-c678f0078b00"
+          },
+          {"from": 8, "heading": "From Step 8", "name": "Cheese sauce"}
+        ],
+        "items": [
+          {
+            "qty": "1",
+            "name": "Baking Dish"
+          }
+        ],
+        "ingredients": [
+          {
+            "qty": "-",
+            "name": "Vegan grated cheese"
+          }
+        ],
+        "tasks": [
+          "Drain the pasta and add to a baking dish",
+          "Pour over the cheese sauce and mix",
+          "Sprinkle the vegan grated cheese on top if using"
+        ],
+        "images": []
+      },
+      {
+        "no": 10,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Assembling",
+          "color": "tagRed"
+        },
+        "links": [],
+        "items": [],
+        "ingredients": [],
+        "tasks": ["Place the pasta in the oven for 20 min at 200 C"],
+        "images": [],
+        "timer": {
+          "id": "2d0f6cc0-6dfc-459a-bb1a-d18a1038114a",
+          "name": "Step 10: Bake Pasta",
+          "minutes": 20,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 11,
+        "type": "PREPARATION",
+        "tag": {
+          "text": "Assembling",
+          "color": "tagRed"
+        },
+        "links": [
+          {
+            "from": 10,
+            "heading": "From Step 10",
+            "name": "Baked Pasta",
+            "timerId": "2d0f6cc0-6dfc-459a-bb1a-d18a1038114a"
+          }
+        ],
+        "items": [],
+        "ingredients": [
+          {
+            "qty": "-",
+            "name": "paprika"
+          }
+        ],
+        "tasks": [
+          "Serve the mac 'n' cheese in a plate",
+          "Sprinkle with some paprika and serve immediately",
+          "Enjoy :)"
+        ],
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": "e0ceb9b3-25ee-42d0-a3be-5c3825ec03ed",
+    "createdAt": "2020-02-13T08:57:02.321Z",
+    "author": "James Wythe",
+    "name": "Veg Curry",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/15-Minute-Veg-Curry-Top-Pot.jpg",
+    "preparationTime": 10,
+    "cookingTime": 10,
+    "portions": "4",
+    "difficulty": "Simple",
+    "ingredients": [
+      {"qty": "2 tsp", "name": "Chopped Garlic Very Lazy"},
+      {"qty": "2 tsp", "name": "Chopped Red Chillies Very Lazy"},
+      {"qty": "2 tbsp", "name": "oil"},
+      {"qty": "1", "name": "red onion roughly sliced"},
+      {"qty": "1 tbsp", "name": "ground coriander"},
+      {"qty": "1", "name": "courgette roughly chopped"},
+      {"qty": "1", "name": "aubergine roughly chopped"},
+      {"qty": "1", "name": "pepper roughly chopped"},
+      {"qty": "1", "name": "400g tin of tomatoes"},
+      {"qty": "1", "name": "400ml tin of coconut milk"},
+      {"qty": "1", "name": "400g tin of chickpeas drained & rinsed"},
+      {"qty": "200 ml", "name": "water (just under 1 cup)"},
+      {"qty": "100 g", "name": "ground almonds roughly 1 cup"},
+      {"qty": " 1", "name": "Lime"},
+      {"qty": "Handful", "name": "fresh coriander (optional)"},
+      {"qty": "Handful", "name": "fresh spinach (optional)"},
+      {"qty": "-", "name": "Salt & pepper"}
+    ],
+    "items": [
+      {"qty": "4", "name": "pinch bowl"},
+      {"qty": "3", "name": "small bowl"},
+      {"qty": "1", "name": "large bowl"},
+      {"qty": "1", "name": "glass"}
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the chilli", "color": "tagRed"},
+        "items": [{"qty": "2", "name": "pinch bowl"}],
+        "ingredients": [
+          {"qty": "2 tbsp", "name": "oil"},
+          {"qty": "2 tsp", "name": "chopped garlic"},
+          {"qty": "1-2 tsp", "name": "chopped red chillies"}
+        ],
+        "tasks": [
+          "Add 2 tbsp oil in a pinch bowl and set aside",
+          "Add 2 tsp chopped garlic in a separate pinch bowl and set aside",
+          "Add 1-2 tsp chopped red chillies in the same pinch bowl and set aside "
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/chilli_onion_oil.jpeg",
+            "alt": "oil, garlic and chilli"
+          }
+        ]
+      },
+      {
+        "no": 2,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the chilli", "color": "tagRed"},
+        "items": [
+          {"qty": "1", "name": "pinch bowl"},
+          {"qty": "1", "name": "small bowl"}
+        ],
+        "ingredients": [
+          {"qty": "1 tbsp", "name": "ground coriander"},
+          {"qty": "1", "name": "onion"}
+        ],
+        "tasks": [
+          "Add 1 tbsp ground coriander in a pinch bowl and set aside",
+          "Peel and slice an onion and set aside in a bowl"
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/onion_coriander.jpeg",
+            "alt": "onion and coriander"
+          }
+        ]
+      },
+      {
+        "no": 3,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the chilli", "color": "tagRed"},
+        "items": [{"qty": "1", "name": "large bowl"}],
+        "ingredients": [
+          {"qty": "1", "name": "eggplant (aubergine)"},
+          {"qty": "1", "name": "zucchini (courgette)"}
+        ],
+        "tasks": [
+          "Wash 1 eggplant, cut it into 1 cm cubes and place it in a large bowl",
+          "Wash 1 zucchini, cut it into small cubes and place it in the same bowl",
+          "Wash 1 bell pepper, cut it into small cubes and place it in the same bowl",
+          "You will no longer need the knife and cutting board"
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/eggplant_zucchini_pepper.jpeg",
+            "alt": "eggplant, zucchini and pepper"
+          }
+        ]
+      },
+      {
+        "no": 4,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the chilli", "color": "tagRed"},
+        "items": [
+          {"qty": "2", "name": "small bowls"},
+          {"qty": "1", "name": "glass"},
+          {"qty": "1", "name": "pinch bowl"}
+        ],
+        "ingredients": [
+          {"qty": "1 (400 g)", "name": "tin of tomatoes"},
+          {"qty": "1 (400 ml)", "name": "tin of coconut milk"},
+          {"qty": "1 (400 g)", "name": "tin of chickpeas"},
+          {"qty": "1 cup (200 ml)", "name": "water"},
+          {"qty": "100 g", "name": "ground almonds"},
+          {"qty": "1", "name": "lime"},
+          {"qty": "-", "name": "salt & pepper"}
+        ],
+        "tasks": [
+          "Open and set aside 1 tin (400 g) of tomatoes",
+          "Open and set aside 1 tin (400 ml) of coconut milk",
+          "Open 1 tin (400 g) of chickpeas, drain and rinse and place in a small bowl",
+          "Add 1 cup (200 ml) of water in a glass and set aside",
+          "Add 100 g ground almonds in a small bowl and set aside",
+          "Squeeze 1 lime and set aside in a pinch bowl"
+        ],
+        "images": [
+          {
+            "src": "http://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/ingredients.jpeg",
+            "alt": "tomatoes, coconut milk, chickpeas, water, almonds and lime juice"
+          }
+        ]
+      },
+      {
+        "no": 5,
+        "type": "PREPARATION",
+        "tag": {"text": "For the chilli", "color": "tagRed"},
+        "items": [{"qty": "1", "name": "large pot"}],
+        "links": [
+          {
+            "from": 1,
+            "heading": "From Step 1",
+            "name": "Oil, garlic and chillies"
+          }
+        ],
+        "ingredients": [],
+        "tasks": [
+          "Place a large pot over high heat",
+          "Add the oil",
+          "Add the chopped garlic",
+          "Add the chopped red chillies",
+          "Sauté for 1-2 minutes"
+        ],
+        "timer": {
+          "id": "95632536-1452-44cf-970d-6efd4c13fbab",
+          "name": "Step 5: Sauté garlic and chillies",
+          "minutes": 2,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 6,
+        "type": "PREPARATION",
+        "tag": {"text": "For the chilli", "color": "tagRed"},
+        "items": [],
+        "links": [
+          {"from": 2, "heading": "From Step 2", "name": "Onion and coriander"}
+        ],
+        "ingredients": [],
+        "tasks": [
+          "Add the onion",
+          "Add the ground coriander",
+          "Stir and sauté for 1-2 minutes"
+        ],
+        "timer": {
+          "id": "5b45a916-6b56-49ea-ae25-887ad8a57a9f",
+          "name": "Step 6: Sauté onion",
+          "minutes": 2,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 7,
+        "type": "PREPARATION",
+        "tag": {"text": "For the chilli", "color": "tagRed"},
+        "items": [],
+        "links": [{"from": 3, "heading": "From Step 3", "name": "Vegetables"}],
+        "ingredients": [],
+        "tasks": ["Add the vegetables", "Stir and sauté for 4 minutes"],
+        "timer": {
+          "id": "802a52e4-7ce0-4432-ba63-7b8b536e92cb",
+          "name": "Step 7: Sauté vegetables",
+          "minutes": 4,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 8,
+        "type": "PREPARATION",
+        "tag": {"text": "For the chilli", "color": "tagRed"},
+        "items": [],
+        "links": [
+          {
+            "from": 4,
+            "heading": "From Step 4",
+            "name": "Tomatoes, coconut milk, chickpeas, water, almonds, lime juice"
+          }
+        ],
+        "ingredients": [],
+        "tasks": [
+          "Add the tinned tomatoes",
+          "Add the coconut milk",
+          "Add the chickpeas",
+          "Add the water",
+          "Add the ground almonds",
+          "Add the lime juice",
+          "Salt and pepper to taste. Make sure to add enough salt",
+          "Stir well",
+          "Cook on a high heat for approximately 10 minutes until the chilli thickens"
+        ],
+        "timer": {
+          "id": "70bae925-677c-44a7-9977-24a3ff150165",
+          "name": "Step 8: Cook Chilli",
+          "minutes": 10,
+          "seconds": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "3a8a2b12-1c63-4640-ae35-5f1d481fdbd6",
+    "createdAt": "2020-02-13T19:35:21.693Z",
+    "author": "James Wythe",
+    "name": "Colourful Lentil Soup",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cauliflower-small.jpg",
+    "preparationTime": 10,
+    "cookingTime": 45,
+    "portions": "4",
+    "difficulty": "Simple",
+    "ingredients": [
+      {"qty": "1", "name": "Cauliflower"},
+      {"qty": "-", "name": "Olive oil"},
+      {"qty": "1", "name": "smoked paprika"},
+      {"qty": "450 g", "name": "sweet potato"},
+      {"qty": "2", "name": "cellery stalks"},
+      {"qty": "3-4", "name": "medium carrots"},
+      {"qty": "1", "name": "medium/large onion"},
+      {"qty": "2", "name": "garlic cloves"},
+      {"qty": "2 tbsp", "name": "olive oil"},
+      {"qty": "1.5 l", "name": "veg stock"},
+      {"qty": "1 cup", "name": "red split lentils"},
+      {"qty": "-", "name": "salt", "notes": "o taste"},
+      {"qty": "-", "name": "pepper", "notes": "to taste"}
+    ],
+    "items": [
+      {
+        "qty": "1",
+        "name": "baking tray",
+        "notes": "Optional, if roasting the cauliflower"
+      },
+      {
+        "qty": "1",
+        "name": "large pan"
+      },
+      {
+        "qty": "2",
+        "name": "pinch bowls",
+        "notes": "to hold the olive oil and garlic"
+      },
+      {
+        "qty": "2",
+        "name": "small bowls",
+        "notes": "to hold the onions and lentils"
+      },
+      {
+        "qty": "1",
+        "name": "large bowl",
+        "notes": "to hold the cut vegetables"
+      },
+      {
+        "qty": "1",
+        "name": "large jar",
+        "notes": "to prepare the stock"
+      }
+    ],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "for the roasted cauliflower", "color": "tagRed"},
+        "ingredients": [{"qty": "1", "name": "Cauliflower"}],
+        "items": [{"qty": "1", "name": "Baking tray"}],
+        "tasks": [
+          "This step is optional, you can have the soup without the cauliflower",
+          "Chop the cauliflower into florets",
+          "Place on a baking tray",
+          "Sprinkle olive oil along with the smoked paprika until lightly covered",
+          "Place in the oven for 45 minutes (make sure to turn half way)"
+        ],
+        "timer": {
+          "id": "e0517d0b-b8c0-41f2-8660-b4ea180d2943",
+          "name": "Step 1: Roasted Cauliflower",
+          "minutes": 45,
+          "seconds": 0
+        },
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/cauliflower.jpeg",
+            "alt": "cauliflower"
+          }
+        ]
+      },
+      {
+        "no": 2,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "for the roasted soup", "color": "tagRed"},
+        "ingredients": [
+          {"qty": "2 tbsps", "name": "olive oil"},
+          {"qty": "2", "name": "garlic cloves"}
+        ],
+        "items": [{"qty": "2", "name": "pinch bowl"}],
+        "tasks": [
+          "Add 2 tbsps olive oil in a pinch bowl and set aside",
+          "Peel and crush 2 garlic cloves. Place them in a pinch bowl and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/lentil_soup_onion_oil.jpeg",
+            "alt": "oil and garlic"
+          }
+        ]
+      },
+      {
+        "no": 3,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "for the roasted soup", "color": "tagRed"},
+        "ingredients": [{"qty": "1", "name": "Onion"}],
+        "items": [{"qty": "1", "name": "small bowl"}],
+        "tasks": [
+          "Peel and slice 1 onion and place it in a small bowl and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/lentil_soup_onion.jpeg",
+            "alt": "onion"
+          }
+        ]
+      },
+      {
+        "no": 4,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "for the roasted soup", "color": "tagRed"},
+        "ingredients": [
+          {"qty": "450 g", "name": "sweet potato"},
+          {"qty": "2", "name": "celery stalks"},
+          {"qty": "3-4", "name": "medium carrots"}
+        ],
+        "items": [{"qty": "1", "name": "large bowl"}],
+        "tasks": [
+          "Peel and chop the sweet potato into small cubes and place in a large bowl",
+          "Thinly slice the carrots and place them the same bowl",
+          "Thinly slice the celery stalcks and place them the same bowl and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/lentil_soup_celery_potatoes_carrot.jpeg",
+            "alt": "vegetables"
+          }
+        ]
+      },
+      {
+        "no": 5,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "for the roasted soup", "color": "tagRed"},
+        "ingredients": [
+          {"qty": "1.5 L", "name": "stock"},
+          {"qty": "1 cup", "name": "lentils"}
+        ],
+        "items": [
+          {"qty": "1", "name": "large jar"},
+          {"qty": "1", "name": "small bowl"}
+        ],
+        "tasks": [
+          "Prepare 1.5 L stock according to the pack instructions and set aside",
+          "Add 1 cup of lentils in a small bowl and set aside"
+        ],
+        "images": [
+          {
+            "src": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/lentil_soup_lentils_stock.jpeg",
+            "alt": "lentils and stock"
+          }
+        ]
+      },
+      {
+        "no": 6,
+        "type": "PREPARATION",
+        "tag": {"text": "for the roasted soup", "color": "tagRed"},
+        "links": [
+          {"from": 2, "heading": "From Step 2", "name": "Olive oil & garlic"}
+        ],
+        "ingredients": [{"qty": "1", "name": "salt & pepper"}],
+        "items": [{"qty": "1", "name": "large Pan"}],
+        "tasks": [
+          "Place a large plan over medium heat",
+          "Add the olive oil",
+          "Add the garlic",
+          "Add a pinch of salt and pepper and stir well"
+        ]
+      },
+      {
+        "no": 7,
+        "type": "PREPARATION",
+        "tag": {"text": "for the roasted soup", "color": "tagRed"},
+        "links": [{"from": 3, "heading": "From Step 3", "name": "Onion"}],
+        "ingredients": [],
+        "items": [],
+        "tasks": [
+          "Once the onion is sizzling add the onion",
+          "Cook for 2 minute until the onion softens"
+        ],
+        "timer": {
+          "id": "53c472f8-6b5d-4a0b-b5d0-2734fdcbaeed",
+          "name": "Cook onion",
+          "minutes": 2,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 8,
+        "type": "PREPARATION",
+        "tag": {"text": "for the roasted soup", "color": "tagRed"},
+        "links": [
+          {
+            "from": 4,
+            "heading": "From Step 4",
+            "name": "Sweet potato, carrots and celery"
+          }
+        ],
+        "ingredients": [{"qty": "-", "name": "salt & pepper"}],
+        "items": [],
+        "tasks": [
+          "Add the sweet potato, carrots and celery",
+          "Add a pinch of salt and pepper",
+          "Fry for for 5-10 minutes until the vegetables have softened"
+        ],
+        "timer": {
+          "id": "6aac186f-5b13-4a7b-be4f-2c7319876876",
+          "name": "Cook vegetables",
+          "minutes": 10,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 9,
+        "type": "PREPARATION",
+        "tag": {"text": "for the roasted soup", "color": "tagRed"},
+        "links": [
+          {"from": 5, "heading": "From Step 5", "name": "Stock and lentils"}
+        ],
+        "ingredients": [{"qty": "-", "name": "salt & pepper"}],
+        "items": [],
+        "tasks": [
+          "Add the stock",
+          "Add the lentils",
+          "Bring to a boil",
+          "Once boiling place the lid on the pan",
+          "Reduce to a simmer for 20 minutes",
+          "Then remove and set aside"
+        ],
+        "timer": {
+          "id": "eedaacff-4f38-4ae8-bf09-693698efb0e8",
+          "name": "Simmer lentils",
+          "minutes": 20,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 10,
+        "type": "PREPARATION",
+        "tag": {"text": "for assembling", "color": "tagRed"},
+        "links": [
+          {
+            "from": 1,
+            "heading": "From Step 1",
+            "name": "Roasted cauliflower",
+            "timerId": "e0517d0b-b8c0-41f2-8660-b4ea180d2943"
+          },
+          {
+            "from": 9,
+            "heading": "From Step 9",
+            "name": "Lentil soup",
+            "timerId": "eedaacff-4f38-4ae8-bf09-693698efb0e8"
+          }
+        ],
+        "ingredients": [],
+        "items": [],
+        "tasks": ["Assemble the soup using the cauliflower", "Enjoy!"]
+      }
+    ]
+  },
+  {
+    "id": "873cc450-c87e-4ba0-a418-f485498a961d",
+    "createdAt": "2020-02-15T16:45:32.485Z",
+    "author": "James Wythe",
+    "name": "Veg Curry",
+    "image": "https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/15-Minute-Veg-Curry-Top-Pot.jpg",
+    "preparationTime": 10,
+    "cookingTime": 10,
+    "portions": "4-6",
+    "difficulty": "Simple",
+    "ingredients": [],
+    "items": [],
+    "steps": [
+      {
+        "no": 1,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the rissoto", "color": "tagRed"},
+        "items": [{"qty": "1", "name": "small pot"}],
+        "ingredients": [],
+        "tasks": [
+          "Place a small pot of water on medium-high heat and set aside to boil"
+        ]
+      },
+      {
+        "no": 2,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the rissoto", "color": "tagRed"},
+        "items": [
+          {"qty": "1", "name": "pinch bowl"},
+          {"qty": "1", "name": "small bowl"}
+        ],
+        "ingredients": [
+          {"qty": "60 ml (or 0.25 cup)", "name": "extra-virgin olive oil"},
+          {"qty": "0.5", "name": "onion"},
+          {"qty": "3", "name": "spring onions"}
+        ],
+        "tasks": [
+          "Add 60 ml (or 0.25 cup) extra-virgin olive oil in pinch bowl and set aside",
+          "Finely dice 0.5 onion and add it to a small bowl",
+          "Chop 3 spring onions (scallions), make sure to include the white and green parts. Add them to the same small bowl and set aside"
+        ]
+      },
+      {
+        "no": 3,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the rissoto", "color": "tagRed"},
+        "items": [
+          {"qty": "1", "name": "pinch bowl"},
+          {"qty": "1", "name": "small bowl"}
+        ],
+        "ingredients": [
+          {"qty": "1", "name": "clove garlic"},
+          {"qty": "330 g (or 1.5 cups)", "name": "arborio (risotto) rice"}
+        ],
+        "tasks": [
+          "Finely chop 1 clove garlic and set aside in a pinch bowl",
+          "In a small bowl add 330 g (or 1.5 cups) arborio (risotto) rice and set aside"
+        ]
+      },
+      {
+        "no": 4,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the rissoto", "color": "tagRed"},
+        "items": [{"qty": "1", "name": "small bowl"}],
+        "ingredients": [
+          {"qty": "80 g (0.5 cup)", "name": "peas", "notes": "frozen or fresh"}
+        ],
+        "tasks": ["In small bowl add 80 g (0.5 cup) peas"]
+      },
+      {
+        "no": 5,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the pesto", "color": "tagRed"},
+        "links": [],
+        "items": [
+          {"qty": "2", "name": "pinch bowl"},
+          {"qty": "1", "name": "small bowl"}
+        ],
+        "ingredients": [
+          {"qty": "1", "name": "60 ml (or 0.25 cup) extra-virgin olive oil"},
+          {"qty": "10 g (or 0.5 cup)", "name": "mint leaves"},
+          {"qty": "10 g (or 0.5 cup)", "name": "flat-leaf parsley leaves"},
+          {"qty": "1", "name": "garlic clove"},
+          {"qty": "1", "name": "lemon"},
+          {"qty": "1 tsp", "name": "salt"},
+          {
+            "qty": "1",
+            "name": "Fresh green chilli",
+            "notes": "Optional. Use as much as you like it"
+          }
+        ],
+        "tasks": [
+          "In a a pinch bowl add 60 ml extra-virgin olive oil and set aside",
+          "In a small bowl add 10g (0.5 cup) mint leaves",
+          "Add 10g (0.5 cup) flat-leaft parsley leaves in the same bowl",
+          "Peel a garlic clove and add it to the same bowl",
+          "Zest the lemon in the same bowl",
+          "Then squeeze the lemon juice in a pinch bowl"
+        ]
+      },
+      {
+        "no": 6,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the rissoto", "color": "tagRed"},
+        "links": [
+          {"from": 1, "heading": "From Step 1", "name": "Boiling water"}
+        ],
+        "items": [],
+        "ingredients": [
+          {
+            "qty": "1",
+            "name": "broccoli head",
+            "notes": "You can also use frozen broccoli florets"
+          }
+        ],
+        "tasks": [
+          "Trim 1 broccoli head into florets, do not include the stalk",
+          "In the pot with boiling water, add salt",
+          "Add the broccoli and boil for 3-4 minutes",
+          "Do not overcook, you want to keep that bright green colour"
+        ],
+        "timer": {
+          "id": "22c54596-27c9-4bc7-9c95-c76045f89d06",
+          "name": "Step 4: Boil broccoli",
+          "minutes": 4,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 7,
+        "type": "MISE_EN_PLACE",
+        "tag": {"text": "For the rissoto", "color": "tagRed"},
+        "links": [
+          {
+            "from": 5,
+            "heading": "From Step 5",
+            "name": "Boiled broccoli",
+            "timerId": "22c54596-27c9-4bc7-9c95-c76045f89d06"
+          }
+        ],
+        "items": [],
+        "ingredients": [{"qty": "1", "name": "broccoli head"}],
+        "tasks": [
+          "Drain the broccoli and run it under cold water until cool",
+          "Set aside to drain",
+          "In the same pot that you used for the broccoli, prepare 1-1.25 litres (4-5 cups) vegetable stock following the instructions on the package",
+          "Set aside on medium heat and continue to next step"
+        ]
+      },
+      {
+        "no": 8,
+        "type": "PREPARATION",
+        "tag": {"text": "For the risotto", "color": "tagRed"},
+        "links": [
+          {"from": 2, "heading": "From Step 2", "name": "Olive oil and onions"}
+        ],
+        "items": [],
+        "ingredients": [
+          {
+            "qty": "1",
+            "name": "large saucepan",
+            "notes": "You can also use a shallow casserole dish"
+          }
+        ],
+        "tasks": [
+          "In a large saucepan, heat the olive oil over medium heat",
+          "Add the onions",
+          "Add a big pinch of salt",
+          "Fry for 2 minutes or until the onions begin to soften"
+        ],
+        "timer": {
+          "id": "3f944f04-71d9-4403-a162-a8128a20c386",
+          "name": "Step 8: Fry onions",
+          "minutes": 2,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 9,
+        "type": "PREPARATION",
+        "tag": {"text": "For the risotto", "color": "tagRed"},
+        "items": [],
+        "links": [
+          {"from": 3, "heading": "From Step 3", "name": "Garlic and rice"}
+        ],
+        "ingredients": [],
+        "tasks": [
+          "Add the garlic and cook for a few seconds",
+          "Add the rice",
+          "Stir well to coat and cook over low heat until the grains begin to look a little translucent around the edges"
+        ]
+      },
+      {
+        "no": 10,
+        "type": "PREPARATION",
+        "tag": {"text": "For the risotto", "color": "tagRed"},
+        "items": [],
+        "links": [
+          {"from": 7, "heading": "From Step 7", "name": "Vegetable stock"}
+        ],
+        "ingredients": [],
+        "tasks": [
+          "Slowly begin to add the warm stock to the rice - about 250ml (or 1 cup) at a time",
+          "If you don’t need all the stock, don’t use it. Different brands of rice need slightly different amounts of stock, so use your best judgement",
+          "Make sure to stir regularly, over low heat until the rice is just cooked through and creamy",
+          "Set the the rice aside to cook for approximately 25 minutes",
+          "Make sure to not overcook"
+        ],
+        "timer": {
+          "id": "a0a185cf-3be7-4566-8514-b441976c6654",
+          "name": "Step 10: Cook rice",
+          "minutes": 25,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 11,
+        "type": "PREPARATION",
+        "tag": {"text": "For the pesto", "color": "tagRed"},
+        "items": [
+          {
+            "qty": "1",
+            "name": "Blender",
+            "notes": "You can also use a food processor"
+          }
+        ],
+        "links": [
+          {"from": 7, "heading": "From Step 7", "name": "Pesto ingredients"}
+        ],
+        "ingredients": [],
+        "tasks": [
+          "In a blender, add the broccoli",
+          "Add the pesto ingredients",
+          "Blend until smooth, approximately 1 minutes"
+        ],
+        "timer": {
+          "id": "1d161e57-13e5-47a5-b424-48c2aac9988b",
+          "name": "Step 11: Blend pesto",
+          "minutes": 1,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 12,
+        "type": "PREPARATION",
+        "tag": {"text": "For the pesto", "color": "tagRed"},
+        "items": [],
+        "links": [
+          {
+            "from": 10,
+            "heading": "From Step 10",
+            "name": "Cooked rice",
+            "timerId": "a0a185cf-3be7-4566-8514-b441976c6654"
+          }
+        ],
+        "ingredients": [],
+        "tasks": ["Once the rice is cooked add the peas", "Cook for 2 minutes"],
+        "timer": {
+          "id": "0688f863-521f-45a9-b2af-9187f1402621",
+          "name": "Step 10: Cook risotto",
+          "minutes": 25,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 13,
+        "type": "PREPARATION",
+        "tag": {"text": "For the pesto", "color": "tagRed"},
+        "items": [],
+        "links": [
+          {
+            "from": 10,
+            "heading": "From Step 10",
+            "name": "Cooked rice",
+            "timerId": "a0a185cf-3be7-4566-8514-b441976c6654"
+          },
+          {"from": 11, "heading": "From Step 11", "name": "Pesto"}
+        ],
+        "ingredients": [],
+        "tasks": ["Remove the risotto from the heat", "Add the pesto and stir"],
+        "timer": {
+          "id": "9097dc8f-f4d2-4423-bcc7-7801ea6c80a5",
+          "name": "Step 10: Cook risotto",
+          "minutes": 25,
+          "seconds": 0
+        }
+      },
+      {
+        "no": 14,
+        "type": "PREPARATION",
+        "tag": {"text": "For the pesto", "color": "tagRed"},
+        "items": [],
+        "ingredients": [],
+        "tasks": [
+          "Serve the rissoto in a plate",
+          "Sprinkle with some vegan parmesan",
+          "Add a pinch of pepper"
+        ]
+      }
+    ]
+  }
+]

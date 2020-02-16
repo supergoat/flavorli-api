@@ -28,9 +28,10 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
-    "start": "sls offline start",
+    "start": "yarn create:seed && sls offline start",
     "build": "rollup -c",
     "watch": "rollup -cw",
+    "create:seed": "cd ./src/seed-data && ts-node createRecipes.ts",
     "deploy": "STAGE=prod yarn build && sls deploy --stage prod && sls dynamodb seed --seed=test --online --region eu-west-2 --stage prod",
     "format": "yarn prettier --write",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\""

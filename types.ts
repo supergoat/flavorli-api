@@ -9,6 +9,7 @@ export type IRecipe = {
   cookingTime: number;
   portions: string;
   difficulty: string;
+  notes?: string[];
   createdAt: string;
   ingredients: IIngredient[];
   items: IItem[];
@@ -18,11 +19,15 @@ export type IRecipe = {
 export interface IIngredient {
   qty: string;
   name: string;
+  notes?: string;
+  link?: string;
 }
 
 export interface IItem {
   qty: string;
   name: string;
+  notes?: string;
+  link?: string;
 }
 
 export interface IStep {
@@ -32,9 +37,15 @@ export interface IStep {
   links?: ILink[];
   items?: IItem[];
   ingredients?: IIngredient[];
-  tasks: string[];
+  tasks: ITask[];
   timer?: ITimer;
   images?: IImage[];
+  notes?: string[];
+}
+
+export interface ITask {
+  name: string;
+  notes?: string[];
 }
 
 export interface ITag {
