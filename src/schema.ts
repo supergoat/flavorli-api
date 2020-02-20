@@ -144,7 +144,23 @@ export const schema = `
     seconds: Int!
   }
 
+  type Cookbook {
+    id: String!
+    name: String!
+    recipes: [Recipe!]!
+  }
+
+  type User {
+    id: String!
+    createdAt: String!
+    firstName: String
+    lastName: String
+    email: String
+    cookbooks: [Cookbook!]!
+  }
+
   type Query {
+    user(id: String!): User!
     recipes: [Recipe!]!
     recipe(id: String!): Recipe!
   }

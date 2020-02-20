@@ -1,15 +1,14 @@
 import uuidv4 from 'uuid/v4';
-import {IRecipe} from '../../../types';
+import {IRecipe} from '../../types';
 
 const timerIdOne = uuidv4();
 const timerIdTwo = uuidv4();
 export const Rissoto: IRecipe = {
-  id: uuidv4(),
+  id: '2a72fea6-8379-4a8f-8178-f5f5d3d67194',
   createdAt: new Date().toISOString(),
   author: 'James Wythe',
   name: 'Broccoli, lemon, mint risotto',
-  image:
-    'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/15-Minute-Veg-Curry-Top-Pot.jpg',
+  image: 'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/risotto.jpeg',
   preparationTime: 10,
   cookingTime: 10,
   portions: '4-6',

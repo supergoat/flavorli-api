@@ -1,4 +1,4 @@
-import {IRecipe} from 'types';
+import {IRecipe} from 'src/types';
 
 export const MacNCheese: IRecipe = {
   id: '018fdcbd-5ddd-45c7-ad11-40df445f27c8',

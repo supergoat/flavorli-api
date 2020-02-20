@@ -13,15 +13,11 @@ if (process.env.STAGE === 'dev') {
 }
 
 let RecipesTable = process.env.RECIPE_TABLE as string;
+let UsersTable = process.env.USERS_TABLE as string;
 
 const promisify = (
-  callback: (
-    fn: (
-      err: AWS.AWSError,
-      data: AWS.DynamoDB.DocumentClient.QueryOutput,
-    ) => void,
-  ) => void,
-): Promise<AWS.DynamoDB.DocumentClient.QueryOutput> =>
+  callback: (fn: (err: AWS.AWSError, data: any) => void) => void,
+): Promise<any> =>
   new Promise((resolve, reject) => {
     callback((err, data) => {
       if (err) {
@@ -59,6 +55,42 @@ export const resolvers = {
       });
 
       return data?.Items;
+    },
+    user: async (_: any, {id}: {id: string}) => {
+      const usersResult = await promisify(callback => {
+        const params = {
+          TableName: UsersTable,
+          KeyConditionExpression: 'id = :userId',
+          ExpressionAttributeValues: {
+            ':userId': id,
+          },
+        };
+
+        docClient.query(params, callback);
+      });
+
+      const user = usersResult?.Items?.[0];
+      const recipeIds = user.cookbooks[0].recipes;
+
+      const recipesResult = await promisify(callback => {
+        const params = {
+          RequestItems: {
+            [RecipesTable]: {
+              Keys: recipeIds.map((recipeId: string) => ({
+                id: recipeId,
+              })),
+            },
+          },
+        };
+
+        docClient.batchGet(params, callback);
+      });
+
+      const recipes = recipesResult?.Responses[RecipesTable];
+
+      user.cookbooks[0].recipes = recipes;
+
+      return user;
     },
   },
   Mutation: {

@@ -1,4 +1,4 @@
-import {IRecipe} from 'types';
+import {IRecipe} from 'src/types';
 
 export const ChocolateCake: IRecipe = {
   id: 'd69fec4b-0eb5-425c-a807-6a1022bc34d1',

@@ -1,5 +1,5 @@
 import uuidv4 from 'uuid/v4';
-import {IRecipe} from '../../../types';
+import {IRecipe} from '../../types';
 
 const timerOneId = uuidv4();
 const timerTwoId = uuidv4();

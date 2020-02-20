@@ -1,8 +1,9 @@
-import {IRecipe} from 'types';
+import {IRecipe} from 'src/types';
+import uuidv4 from 'uuid/v4';
 
 export const BananaChocolateSmoothie: IRecipe = {
-  id: 'ecd040e7-08b4-454e-94e1-2a910342d4f0',
-  createdAt: '2020-01-19T20:06:42.873Z',
+  id: uuidv4(),
+  createdAt: new Date().toISOString(),
   author: 'Robin Robertson',
   name: 'Banana-Chocolate Smoothie',
   image:
@@ -11,14 +12,17 @@ export const BananaChocolateSmoothie: IRecipe = {
   cookingTime: 0,
   portions: '1',
   difficulty: '1',
+  notes: ['This recipe requires a blender'],
   ingredients: [
     {
       qty: '1',
-      name: 'frozen ripe banana, cut into chunks before freezing',
+      name: 'very ripe banana',
+      notes:
+        'Make sure that the banana is very ripe or the smoothie will not be sweet',
     },
     {
-      qty: '1/2 cup/35 g',
-      name: 'Frozen Blueberries',
+      qty: '0.5 cup (35 g)',
+      name: 'frozen blueberries',
     },
     {
       qty: '2 tbps',
@@ -29,7 +33,7 @@ export const BananaChocolateSmoothie: IRecipe = {
       name: 'ground flaxseeds (or linseeds)',
     },
     {
-      qty: '1/2 tsp',
+      qty: '0.5 tsp',
       name: 'vanilla extract',
     },
     {
@@ -38,18 +42,20 @@ export const BananaChocolateSmoothie: IRecipe = {
     },
     {
       qty: '1 tbsp',
-      name: 'sugar (optional, depending on the sweetness of the fruit)',
+      name: 'sugar',
+      notes: 'Optional',
     },
     {
-      qty: '1 cup/22.5 g',
+      qty: '1 cup (22.5 g)',
       name: 'raw spinach leaves',
     },
     {
       qty: '3 to 4',
-      name: 'ice cubes (optional)',
+      name: 'ice cubes',
+      notes: 'Optional',
     },
     {
-      qty: '1 1/2 cup (360 ml)',
+      qty: '1.5 cup (360 ml)',
       name: 'water',
     },
   ],
@@ -57,22 +63,6 @@ export const BananaChocolateSmoothie: IRecipe = {
     {
       qty: '1',
       name: 'Blender',
-    },
-    {
-      qty: '1',
-      name: 'Cup',
-    },
-    {
-      qty: '1/2',
-      name: 'cup',
-    },
-    {
-      qty: '1',
-      name: 'tablespoon',
-    },
-    {
-      qty: '1',
-      name: 'teaspoon',
     },
   ],
   steps: [
@@ -92,11 +82,11 @@ export const BananaChocolateSmoothie: IRecipe = {
       ingredients: [
         {
           qty: '1',
-          name: 'frozen ripe banana, cut into chunks before freezing',
+          name: 'very ripe banana',
         },
         {
-          qty: '1/2 cup/35 g',
-          name: 'Frozen Blueberries',
+          qty: '0.5 cup/35 g',
+          name: 'frozen blueberries',
         },
         {
           qty: '2 tbps',
@@ -107,7 +97,7 @@ export const BananaChocolateSmoothie: IRecipe = {
           name: 'ground flaxseeds (or linseeds)',
         },
         {
-          qty: '1/2 tsp',
+          qty: '0.5 tsp',
           name: 'vanilla extract',
         },
         {
@@ -116,7 +106,8 @@ export const BananaChocolateSmoothie: IRecipe = {
         },
         {
           qty: '1 tbsp',
-          name: 'sugar (optional, depending on the sweetness of the fruit)',
+          name: 'sugar',
+          notes: 'Optional',
         },
         {
           qty: '1 cup/22.5 g',
@@ -124,30 +115,32 @@ export const BananaChocolateSmoothie: IRecipe = {
         },
         {
           qty: '3 to 4',
-          name: 'ice cubes (optional)',
+          name: 'ice cubes',
+          notes: 'Optional',
         },
         {
-          qty: '1 1/2 cup (360 ml)',
+          qty: '1.5 cup (360 ml)',
           name: 'water',
         },
       ],
       tasks: [
         {
-          name:
-            'Add 1 frozen ripe banana, cut into chunks before freezing in a blender',
+          name: 'Cut 1 very ripe banana into chunks and add it to the blender',
         },
-        {name: 'Add 1/2 cup/35 g Frozen Blueberries'},
+        {name: 'Add 0.5 cup (35 g) frozen blueberries'},
         {name: 'Add 2 tbsps unsweetened cocoa powder'},
         {name: 'Add 1 tbsp ground flaxseeds (or linseeds)'},
         {name: 'Add 1 tsp vanilla extract'},
         {name: 'Add 1 tbsp almond butter (or peanut butter)'},
         {
-          name:
-            'Add 1 tbsp sugar (optional, depending on the sweetness of the fruit)',
+          name: '(Optional) Add 1 tbsp sugar',
+          notes: [
+            'If the banana is not very ripe the smoothie will not be sweet enough. In that case you can add some sugar',
+          ],
         },
-        {name: 'Add 1 cup/22.5 g raw spinach leaves'},
-        {name: 'Add 3 to 4 ice cubes (optional)'},
-        {name: 'Add 1 1/2 cup cup (360 ml) water'},
+        {name: 'Add 1 cup (22.5 g) raw spinach leaves'},
+        {name: '(Optional) Add 3 to 4 ice cubes'},
+        {name: 'Add 1.5 cup (360 ml) water'},
       ],
       images: [],
     },
@@ -164,12 +157,13 @@ export const BananaChocolateSmoothie: IRecipe = {
         {
           name:
             'Blend all the ingredients until thick and smooth for about 1 minute',
+          notes: ['For thinner texture, add less ice (if using) or more water'],
         },
-        {name: 'For thinner texture, add less ice (if using) or more water'},
         {name: 'Serve immediately'},
+        {name: 'Enjoy!'},
       ],
       timer: {
-        id: '1650eae6-a535-427b-89f3-c137b87e91aa',
+        id: uuidv4(),
         name: 'Step 2: Blend',
         minutes: 1,
         seconds: 0,

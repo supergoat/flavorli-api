@@ -7,8 +7,9 @@ import {CherryBerrySmoothie} from './recipes/cherry-berry-smoothie';
 import {GreekPastitsio} from './recipes/greek-pastitsio';
 import {BananaChocolateSmoothie} from './recipes/banana-chocolate-smoothie';
 import {VegCurry} from './recipes/veg-curry';
+import {panayiotis} from './users/panayiotis';
 
-export const data = [
+const recipes = [
   Rissoto,
   LentilSoup,
   ChocolateCake,
@@ -19,9 +20,12 @@ export const data = [
   VegCurry,
 ];
 
-createJSONFile('./Recipes.json', data);
+const users = [panayiotis];
 
-export function createJSONFile(fileName: string, data: Object) {
+createJSONFile('./Recipes.json', recipes);
+createJSONFile('./Users.json', users);
+
+function createJSONFile(fileName: string, data: Object) {
   jsonfile.writeFileSync(fileName, data, function(err: string) {
     if (err) {
       console.error(err);

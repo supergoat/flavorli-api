@@ -1,4 +1,4 @@
-import {IRecipe} from 'types';
+import {IRecipe} from 'src/types';
 
 export const GreekPastitsio: IRecipe = {
   id: 'e76c7f69-fe2c-4a76-8576-83155b0f8541',

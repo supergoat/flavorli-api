@@ -1,0 +1,131 @@
+service: flavorli
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: eu-west-2
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 4000
+  dynamodb: # Setup dynamodb to run locally
+    stages:
+      - dev
+      - prod
+      - staging
+    start:
+      port: 8000
+      migrate: true
+      seed: true
+    seed:
+      test:
+        sources:
+          - table: ${self:custom.tableNames.recipes}
+            sources: [src/seed-data/Recipes.json]
+  prefix: ${self:service}-${self:provider.region}-${self:provider.stage}
+  tableNames:
+    recipes: ${self:custom.prefix}-Recipes
+
+functions:
+  graphql:
+    handler: dist/index.graphqlHandler
+    role: FlavorliLambdaRole
+    events:
+      - http:
+          path: graphql
+          method: post
+          cors: true
+      - http:
+          path: graphql
+          method: get
+          cors: true
+    environment:
+      DYNAMODB_PORT: ${self:custom.dynamodb.start.port}
+      STAGE: ${self:provider.stage}
+      RECIPE_TABLE: ${self:custom.tableNames.recipes}
+
+resources:
+  Resources:
+    FlavorliBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.prefix}-bucket
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: index.html
+
+    FlavorliBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket:
+          Ref: 'FlavorliBucket'
+        PolicyDocument:
+          Statement:
+            - Effect: 'Allow'
+              Principal: '*'
+              Action:
+                - 's3:GetObject'
+              Resource:
+                Fn::Join:
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - Ref: 'FlavorliBucket'
+                    - '/*'
+
+    RecipeTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.tableNames.recipes}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+          - AttributeName: createdAt
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+          - AttributeName: createdAt
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+    FlavorliLambdaRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: FlavorliLambda
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Principal:
+                Service:
+                  - lambda.amazonaws.com
+              Action: sts:AssumeRole
+        Policies:
+          - PolicyName: 'Dynamo-ServiceRole-Policy'
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: 'Allow'
+                  Action:
+                    - 'dynamodb:Query'
+                    - 'dynamodb:BatchWriteItem'
+                    - 'dynamodb:GetItem'
+                    - 'dynamodb:DeleteItem'
+                    - 'dynamodb:PutItem'
+                    - 'dynamodb:Scan'
+                    - 'dynamodb:UpdateItem'
+                  Resource:
+                    - !GetAtt RecipeTable.Arn
+
+  Outputs:
+    FlavorliBucketURL:
+      Description: 'FlavorliBucket Website URL'
+      Value:
+        'Fn::GetAtt': [FlavorliBucket, WebsiteURL]

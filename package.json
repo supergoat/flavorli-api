@@ -32,7 +32,8 @@
     "build": "rollup -c",
     "watch": "rollup -cw",
     "create:seed": "cd ./src/seed-data && ts-node createRecipes.ts",
-    "deploy": "STAGE=prod yarn build && sls deploy --stage prod && sls dynamodb seed --seed=test --online --region eu-west-2 --stage prod",
+    "deploy:prod": "STAGE=prod yarn create:seed && yarn build && sls deploy --stage prod && sls dynamodb seed --seed=test --online --region eu-west-2 --stage prod",
+    "deploy:staging": "STAGE=staging yarn create:seed && yarn build && sls deploy --stage staging && sls dynamodb seed --seed=test --online --region eu-west-2 --stage staging",
     "format": "yarn prettier --write",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\""
   }

@@ -1,8 +1,9 @@
-import {IRecipe} from 'types';
+import {IRecipe} from 'src/types';
+import uuidv4 from 'uuid/v4';
 
 export const CherryBerrySmoothie: IRecipe = {
-  id: '0216341c-7d28-433f-8a87-42218d8a5452',
-  createdAt: '2020-01-19T19:37:42.873Z',
+  id: uuidv4(),
+  createdAt: new Date().toISOString(),
   author: 'Robin Robertson',
   name: 'Cherry Berry Smoothie',
   image:
@@ -11,18 +12,22 @@ export const CherryBerrySmoothie: IRecipe = {
   cookingTime: 0,
   portions: '1',
   difficulty: '1',
+  notes: ['This recipe requires a blender'],
   ingredients: [
     {
-      qty: '1 cup/100 g',
-      name: 'Frozen Blueberries',
-    },
-    {
-      qty: '1/2 cup/110 g',
-      name: 'fresh or frozen pitted cherries',
-    },
-    {
       qty: '1',
-      name: 'frozen ripe banana, cut into chunks before freezing',
+      name: 'very ripe banana',
+      notes:
+        'Make sure that the banana is very ripe or the smoothie will not be sweet',
+    },
+    {
+      qty: '1 cup (100 g)',
+      name: 'frozen blueberries',
+    },
+    {
+      qty: '0.5 cup (110 g)',
+      name: 'pitted cherries',
+      notes: 'fresh or frozen ',
     },
     {
       qty: '1 tbsp',
@@ -33,11 +38,11 @@ export const CherryBerrySmoothie: IRecipe = {
       name: 'almond butter (or peanut butter)',
     },
     {
-      qty: '1 cup/22.5 g',
+      qty: '1 cup (22.5 g)',
       name: 'raw spinach leaves',
     },
     {
-      qty: '1 1/2 cup (360 ml)',
+      qty: '1.5 cup (360 ml)',
       name: 'water',
     },
   ],
@@ -45,18 +50,6 @@ export const CherryBerrySmoothie: IRecipe = {
     {
       qty: '1',
       name: 'Blender',
-    },
-    {
-      qty: '1',
-      name: 'Cup',
-    },
-    {
-      qty: '1/2',
-      name: 'cup',
-    },
-    {
-      qty: '1',
-      name: 'tablespoon',
     },
   ],
   steps: [
@@ -75,16 +68,16 @@ export const CherryBerrySmoothie: IRecipe = {
       ],
       ingredients: [
         {
-          qty: '1 cup/100 g',
-          name: 'Frozen Blueberries',
-        },
-        {
-          qty: '1/2 cup/110 g',
-          name: 'fresh or frozen pitted cherries',
-        },
-        {
           qty: '1',
-          name: 'frozen ripe banana, cut into chunks before freezing',
+          name: 'very ripe banana',
+        },
+        {
+          qty: '1 cup (100 g)',
+          name: 'frozen blueberries',
+        },
+        {
+          qty: '0.5 cup (110 g)',
+          name: 'pitted cherries',
         },
         {
           qty: '1 tbsp',
@@ -95,22 +88,24 @@ export const CherryBerrySmoothie: IRecipe = {
           name: 'almond butter (or peanut butter)',
         },
         {
-          qty: '1 cup/22.5 g',
+          qty: '1 cup (22.5 g)',
           name: 'raw spinach leaves',
         },
         {
-          qty: '1 1/2 cup (360 ml)',
+          qty: '1.5 cup (360 ml)',
           name: 'water',
         },
       ],
       tasks: [
-        {name: 'Add 1 cup/100 g Frozen Blueberries in a blender'},
-        {name: 'Add 1/2 cup/110 g fresh or frozen pitted cherries'},
-        {name: 'Add 1 frozen ripe banana, cut into chunks before freezing'},
+        {
+          name: 'Cut 1 very ripe banana into chunks and add it to the blender',
+        },
+        {name: 'Add 1 cup (100 g) frozen blueberries'},
+        {name: 'Add 0.5 cup (110 g) fresh or frozen pitted cherries'},
         {name: 'Add 1 tbsp ground flaxseeds (or linseeds)'},
         {name: 'Add 1 tbsp almond butter (or peanut butter)'},
-        {name: 'Add 1 cup/22.5 g raw spinach leaves'},
-        {name: 'Add 1 1/2 cup cup (360 ml) water'},
+        {name: 'Add 1 cup (22.5 g) raw spinach leaves'},
+        {name: 'Add 1.5 cup  (360 ml) water'},
       ],
       images: [],
     },
@@ -126,13 +121,14 @@ export const CherryBerrySmoothie: IRecipe = {
       tasks: [
         {
           name:
-            'Blend all the ingredients until smooth and creamy for about 1 minute',
+            'Blend all the ingredients until thick and smooth for about 1 minute',
+          notes: ['For thinner texture, add less ice (if using) or more water'],
         },
-        {name: 'Add more water if you prefer a thinner consistency'},
         {name: 'Serve immediately'},
+        {name: 'Enjoy!'},
       ],
       timer: {
-        id: 'ce739171-8fac-4cfe-a367-d513ab74b0dc',
+        id: uuidv4(),
         name: 'Step 2: Blend',
         minutes: 1,
         seconds: 0,
