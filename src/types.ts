@@ -94,5 +94,5 @@ export interface IUser {
 export interface ICookbook {
   id: string;
   name: string;
-  recipes: IRecipe[];
+  recipes: string[];
 }
