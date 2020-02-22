@@ -83,7 +83,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/flavorli/staging/1581980804776-2020-02-17T23:06:44.776Z/flavorli.zip"
+                "S3Key": "serverless/flavorli/staging/1582372472523-2020-02-22T11:54:32.523Z/flavorli.zip"
               },
               "FunctionName": "flavorli-staging-graphql",
               "Handler": "dist/index.graphqlHandler",
@@ -100,7 +100,8 @@
                 "Variables": {
                   "DYNAMODB_PORT": 8000,
                   "STAGE": "staging",
-                  "RECIPE_TABLE": "flavorli-eu-west-2-staging-Recipes"
+                  "RECIPE_TABLE": "flavorli-eu-west-2-staging-Recipes",
+                  "USERS_TABLE": "flavorli-eu-west-2-staging-Users"
                 }
               }
             },
@@ -109,14 +110,14 @@
               "FlavorliLambdaRole"
             ]
           },
-          "GraphqlLambdaVersiondCZ2YyzbsumzgsEIRUPWVNemfh54qLIs2r5BCYW4sc": {
+          "GraphqlLambdaVersionZtDWqPJt9RE1JEpYbnsRagBSNVGaZTHmIjX3yQ5LE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GraphqlLambdaFunction"
               },
-              "CodeSha256": "OHIROpOBevtYgIwYySMs+MFUCOVgGyBxWwau7OQApag="
+              "CodeSha256": "btuuwv9UesLmLNm0qitdUO273yLeduPQTqhY/bYwwXg="
             }
           },
           "ApiGatewayRestApi": {
@@ -203,7 +204,10 @@
                 "Ref": "ApiGatewayRestApi"
               },
               "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
+              "AuthorizationType": "COGNITO_USER_POOLS",
+              "AuthorizerId": {
+                "Ref": "FlavorliApiGatewayAuthorizer"
+              },
               "Integration": {
                 "IntegrationHttpMethod": "POST",
                 "Type": "AWS_PROXY",
@@ -246,7 +250,10 @@
                 "Ref": "ApiGatewayRestApi"
               },
               "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
+              "AuthorizationType": "COGNITO_USER_POOLS",
+              "AuthorizerId": {
+                "Ref": "FlavorliApiGatewayAuthorizer"
+              },
               "Integration": {
                 "IntegrationHttpMethod": "POST",
                 "Type": "AWS_PROXY",
@@ -277,7 +284,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1581980793315": {
+          "ApiGatewayDeployment1582372459811": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -369,6 +376,52 @@
               }
             }
           },
+          "FlavorliCognitoUserPool": {
+            "Type": "AWS::Cognito::UserPool",
+            "Properties": {
+              "UserPoolName": "flavorli-eu-west-2-staging-userPool",
+              "AliasAttributes": [
+                "phone_number",
+                "email"
+              ],
+              "AutoVerifiedAttributes": [
+                "phone_number"
+              ],
+              "Schema": [
+                {
+                  "Name": "email",
+                  "Required": true
+                },
+                {
+                  "Name": "gender",
+                  "Required": true
+                },
+                {
+                  "Name": "phone_number",
+                  "Required": true
+                }
+              ],
+              "SmsConfiguration": {
+                "ExternalId": "generate-your-own-uuid-here",
+                "SnsCallerArn": {
+                  "Fn::GetAtt": [
+                    "FlavorliLambdaRole",
+                    "Arn"
+                  ]
+                }
+              }
+            }
+          },
+          "FlavorliCognitoUserPoolClient": {
+            "Type": "AWS::Cognito::UserPoolClient",
+            "Properties": {
+              "ClientName": "flavorli-eu-west-2-staging-userPoolClient",
+              "GenerateSecret": false,
+              "UserPoolId": {
+                "Ref": "FlavorliCognitoUserPool"
+              }
+            }
+          },
           "RecipeTable": {
             "Type": "AWS::DynamoDB::Table",
             "Properties": {
@@ -377,9 +430,27 @@
                 {
                   "AttributeName": "id",
                   "AttributeType": "S"
-                },
+                }
+              ],
+              "KeySchema": [
                 {
-                  "AttributeName": "createdAt",
+                  "AttributeName": "id",
+                  "KeyType": "HASH"
+                }
+              ],
+              "ProvisionedThroughput": {
+                "ReadCapacityUnits": 1,
+                "WriteCapacityUnits": 1
+              }
+            }
+          },
+          "UserTable": {
+            "Type": "AWS::DynamoDB::Table",
+            "Properties": {
+              "TableName": "flavorli-eu-west-2-staging-Users",
+              "AttributeDefinitions": [
+                {
+                  "AttributeName": "id",
                   "AttributeType": "S"
                 }
               ],
@@ -387,10 +458,6 @@
                 {
                   "AttributeName": "id",
                   "KeyType": "HASH"
-                },
-                {
-                  "AttributeName": "createdAt",
-                  "KeyType": "RANGE"
                 }
               ],
               "ProvisionedThroughput": {
@@ -410,10 +477,18 @@
                     "Effect": "Allow",
                     "Principal": {
                       "Service": [
-                        "lambda.amazonaws.com"
+                        "lambda.amazonaws.com",
+                        "cognito-idp.amazonaws.com"
                       ]
                     },
-                    "Action": "sts:AssumeRole"
+                    "Action": "sts:AssumeRole",
+                    "Condition": {
+                      "StringEquals": {
+                        "sts:ExternalId": [
+                          "generate-your-own-uuid-here"
+                        ]
+                      }
+                    }
                   }
                 ]
               },
@@ -429,6 +504,7 @@
                           "dynamodb:Query",
                           "dynamodb:BatchWriteItem",
                           "dynamodb:GetItem",
+                          "dynamodb:BatchGetItem",
                           "dynamodb:DeleteItem",
                           "dynamodb:PutItem",
                           "dynamodb:Scan",
@@ -440,13 +516,55 @@
                               "RecipeTable",
                               "Arn"
                             ]
+                          },
+                          {
+                            "Fn::GetAtt": [
+                              "UserTable",
+                              "Arn"
+                            ]
                           }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "PolicyName": "Sns-ServiceRole-Policy",
+                  "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                      {
+                        "Effect": "Allow",
+                        "Action": [
+                          "sns:*"
+                        ],
+                        "Resource": [
+                          "*"
                         ]
                       }
                     ]
                   }
                 }
               ]
+            }
+          },
+          "FlavorliApiGatewayAuthorizer": {
+            "Type": "AWS::ApiGateway::Authorizer",
+            "Properties": {
+              "Name": "flavorli-eu-west-2-staging-authorizer",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "Type": "COGNITO_USER_POOLS",
+              "ProviderARNs": [
+                {
+                  "Fn::GetAtt": [
+                    "FlavorliCognitoUserPool",
+                    "Arn"
+                  ]
+                }
+              ],
+              "IdentitySource": "method.request.header.Authorization"
             }
           }
         },
@@ -459,7 +577,7 @@
           "GraphqlLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GraphqlLambdaVersiondCZ2YyzbsumzgsEIRUPWVNemfh54qLIs2r5BCYW4sc"
+              "Ref": "GraphqlLambdaVersionZtDWqPJt9RE1JEpYbnsRagBSNVGaZTHmIjX3yQ5LE"
             }
           },
           "ServiceEndpoint": {
@@ -492,6 +610,18 @@
                 "FlavorliBucket",
                 "WebsiteURL"
               ]
+            }
+          },
+          "FlavorliCognitoUserPoolId": {
+            "Description": "Flavorli Cognito User Pool ID",
+            "Value": {
+              "Ref": "FlavorliCognitoUserPool"
+            }
+          },
+          "FlavorliCognitoUserPoolClientId": {
+            "Description": "Flavorli Cognito User Pool Client ID",
+            "Value": {
+              "Ref": "FlavorliCognitoUserPoolClient"
             }
           }
         }
@@ -588,6 +718,12 @@
                 "sources": [
                   "src/seed-data/Recipes.json"
                 ]
+              },
+              {
+                "table": "flavorli-eu-west-2-staging-Users",
+                "sources": [
+                  "src/seed-data/Users.json"
+                ]
               }
             ]
           }
@@ -595,7 +731,8 @@
       },
       "prefix": "flavorli-eu-west-2-staging",
       "tableNames": {
-        "recipes": "flavorli-eu-west-2-staging-Recipes"
+        "recipes": "flavorli-eu-west-2-staging-Recipes",
+        "users": "flavorli-eu-west-2-staging-Users"
       }
     },
     "plugins": [
@@ -631,6 +768,15 @@
                 ],
                 "allowCredentials": false
               },
+              "authorizer": {
+                "type": "COGNITO_USER_POOLS",
+                "authorizerId": {
+                  "Ref": "FlavorliApiGatewayAuthorizer"
+                },
+                "resultTtlInSeconds": 300,
+                "identitySource": "method.request.header.Authorization",
+                "claims": []
+              },
               "integration": "AWS_PROXY"
             }
           },
@@ -657,6 +803,15 @@
                 ],
                 "allowCredentials": false
               },
+              "authorizer": {
+                "type": "COGNITO_USER_POOLS",
+                "authorizerId": {
+                  "Ref": "FlavorliApiGatewayAuthorizer"
+                },
+                "resultTtlInSeconds": 300,
+                "identitySource": "method.request.header.Authorization",
+                "claims": []
+              },
               "integration": "AWS_PROXY"
             }
           }
@@ -664,7 +819,8 @@
         "environment": {
           "DYNAMODB_PORT": 8000,
           "STAGE": "staging",
-          "RECIPE_TABLE": "flavorli-eu-west-2-staging-Recipes"
+          "RECIPE_TABLE": "flavorli-eu-west-2-staging-Recipes",
+          "USERS_TABLE": "flavorli-eu-west-2-staging-Users"
         },
         "name": "flavorli-staging-graphql",
         "package": {},
@@ -672,7 +828,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GraphqlLambdaVersiondCZ2YyzbsumzgsEIRUPWVNemfh54qLIs2r5BCYW4sc"
+        "versionLogicalId": "GraphqlLambdaVersionZtDWqPJt9RE1JEpYbnsRagBSNVGaZTHmIjX3yQ5LE"
       }
     },
     "resources": {
@@ -718,6 +874,52 @@
             }
           }
         },
+        "FlavorliCognitoUserPool": {
+          "Type": "AWS::Cognito::UserPool",
+          "Properties": {
+            "UserPoolName": "flavorli-eu-west-2-staging-userPool",
+            "AliasAttributes": [
+              "phone_number",
+              "email"
+            ],
+            "AutoVerifiedAttributes": [
+              "phone_number"
+            ],
+            "Schema": [
+              {
+                "Name": "email",
+                "Required": true
+              },
+              {
+                "Name": "gender",
+                "Required": true
+              },
+              {
+                "Name": "phone_number",
+                "Required": true
+              }
+            ],
+            "SmsConfiguration": {
+              "ExternalId": "generate-your-own-uuid-here",
+              "SnsCallerArn": {
+                "Fn::GetAtt": [
+                  "FlavorliLambdaRole",
+                  "Arn"
+                ]
+              }
+            }
+          }
+        },
+        "FlavorliCognitoUserPoolClient": {
+          "Type": "AWS::Cognito::UserPoolClient",
+          "Properties": {
+            "ClientName": "flavorli-eu-west-2-staging-userPoolClient",
+            "GenerateSecret": false,
+            "UserPoolId": {
+              "Ref": "FlavorliCognitoUserPool"
+            }
+          }
+        },
         "RecipeTable": {
           "Type": "AWS::DynamoDB::Table",
           "Properties": {
@@ -726,9 +928,27 @@
               {
                 "AttributeName": "id",
                 "AttributeType": "S"
-              },
+              }
+            ],
+            "KeySchema": [
               {
-                "AttributeName": "createdAt",
+                "AttributeName": "id",
+                "KeyType": "HASH"
+              }
+            ],
+            "ProvisionedThroughput": {
+              "ReadCapacityUnits": 1,
+              "WriteCapacityUnits": 1
+            }
+          }
+        },
+        "UserTable": {
+          "Type": "AWS::DynamoDB::Table",
+          "Properties": {
+            "TableName": "flavorli-eu-west-2-staging-Users",
+            "AttributeDefinitions": [
+              {
+                "AttributeName": "id",
                 "AttributeType": "S"
               }
             ],
@@ -736,10 +956,6 @@
               {
                 "AttributeName": "id",
                 "KeyType": "HASH"
-              },
-              {
-                "AttributeName": "createdAt",
-                "KeyType": "RANGE"
               }
             ],
             "ProvisionedThroughput": {
@@ -759,10 +975,18 @@
                   "Effect": "Allow",
                   "Principal": {
                     "Service": [
-                      "lambda.amazonaws.com"
+                      "lambda.amazonaws.com",
+                      "cognito-idp.amazonaws.com"
                     ]
                   },
-                  "Action": "sts:AssumeRole"
+                  "Action": "sts:AssumeRole",
+                  "Condition": {
+                    "StringEquals": {
+                      "sts:ExternalId": [
+                        "generate-your-own-uuid-here"
+                      ]
+                    }
+                  }
                 }
               ]
             },
@@ -778,6 +1002,7 @@
                         "dynamodb:Query",
                         "dynamodb:BatchWriteItem",
                         "dynamodb:GetItem",
+                        "dynamodb:BatchGetItem",
                         "dynamodb:DeleteItem",
                         "dynamodb:PutItem",
                         "dynamodb:Scan",
@@ -789,13 +1014,55 @@
                             "RecipeTable",
                             "Arn"
                           ]
+                        },
+                        {
+                          "Fn::GetAtt": [
+                            "UserTable",
+                            "Arn"
+                          ]
                         }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "PolicyName": "Sns-ServiceRole-Policy",
+                "PolicyDocument": {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                    {
+                      "Effect": "Allow",
+                      "Action": [
+                        "sns:*"
+                      ],
+                      "Resource": [
+                        "*"
                       ]
                     }
                   ]
                 }
               }
             ]
+          }
+        },
+        "FlavorliApiGatewayAuthorizer": {
+          "Type": "AWS::ApiGateway::Authorizer",
+          "Properties": {
+            "Name": "flavorli-eu-west-2-staging-authorizer",
+            "RestApiId": {
+              "Ref": "ApiGatewayRestApi"
+            },
+            "Type": "COGNITO_USER_POOLS",
+            "ProviderARNs": [
+              {
+                "Fn::GetAtt": [
+                  "FlavorliCognitoUserPool",
+                  "Arn"
+                ]
+              }
+            ],
+            "IdentitySource": "method.request.header.Authorization"
           }
         }
       },
@@ -808,6 +1075,18 @@
               "WebsiteURL"
             ]
           }
+        },
+        "FlavorliCognitoUserPoolId": {
+          "Description": "Flavorli Cognito User Pool ID",
+          "Value": {
+            "Ref": "FlavorliCognitoUserPool"
+          }
+        },
+        "FlavorliCognitoUserPoolClientId": {
+          "Description": "Flavorli Cognito User Pool Client ID",
+          "Value": {
+            "Ref": "FlavorliCognitoUserPoolClient"
+          }
         }
       }
     },
@@ -816,7 +1095,7 @@
     "artifact": "/Users/panayiotis/flavorli-api/.serverless/flavorli.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/flavorli/staging/1581980804776-2020-02-17T23:06:44.776Z",
+    "artifactDirectoryName": "serverless/flavorli/staging/1582372472523-2020-02-22T11:54:32.523Z",
     "artifact": "flavorli.zip"
   }
 }

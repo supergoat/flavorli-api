@@ -44,10 +44,18 @@ functions:
           path: graphql
           method: post
           cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: FlavorliApiGatewayAuthorizer
       - http:
           path: graphql
           method: get
           cors: true
+          authorizer:
+            type: COGNITO_USER_POOLS
+            authorizerId:
+              Ref: FlavorliApiGatewayAuthorizer
     environment:
       DYNAMODB_PORT: ${self:custom.dynamodb.start.port}
       STAGE: ${self:provider.stage}
@@ -81,6 +89,34 @@ resources:
                   - - 'arn:aws:s3:::'
                     - Ref: 'FlavorliBucket'
                     - '/*'
+
+    FlavorliCognitoUserPool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        UserPoolName: ${self:custom.prefix}-userPool
+        AliasAttributes:
+          - phone_number
+          - email
+        AutoVerifiedAttributes:
+          - phone_number
+        Schema:
+          - Name: email
+            Required: true
+          - Name: gender
+            Required: true
+          - Name: phone_number
+            Required: true
+        SmsConfiguration:
+          ExternalId: 'generate-your-own-uuid-here'
+          SnsCallerArn: !GetAtt FlavorliLambdaRole.Arn
+
+    FlavorliCognitoUserPoolClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: ${self:custom.prefix}-userPoolClient
+        GenerateSecret: false
+        UserPoolId:
+          Ref: 'FlavorliCognitoUserPool'
 
     RecipeTable:
       Type: AWS::DynamoDB::Table
@@ -120,7 +156,12 @@ resources:
               Principal:
                 Service:
                   - lambda.amazonaws.com
+                  - cognito-idp.amazonaws.com
               Action: sts:AssumeRole
+              Condition:
+                StringEquals:
+                  sts:ExternalId:
+                    - 'generate-your-own-uuid-here'
         Policies:
           - PolicyName: 'Dynamo-ServiceRole-Policy'
             PolicyDocument:
@@ -139,9 +180,37 @@ resources:
                   Resource:
                     - !GetAtt RecipeTable.Arn
                     - !GetAtt UserTable.Arn
+          - PolicyName: 'Sns-ServiceRole-Policy'
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: 'Allow'
+                  Action:
+                    - 'sns:*'
+                  Resource:
+                    - '*'
+
+    FlavorliApiGatewayAuthorizer:
+      Type: AWS::ApiGateway::Authorizer
+      Properties:
+        Name: ${self:custom.prefix}-authorizer
+        RestApiId:
+          Ref: ApiGatewayRestApi
+        Type: COGNITO_USER_POOLS
+        ProviderARNs:
+          - Fn::GetAtt: [FlavorliCognitoUserPool, Arn]
+        IdentitySource: method.request.header.Authorization
 
   Outputs:
     FlavorliBucketURL:
       Description: 'FlavorliBucket Website URL'
       Value:
         'Fn::GetAtt': [FlavorliBucket, WebsiteURL]
+    FlavorliCognitoUserPoolId:
+      Description: 'Flavorli Cognito User Pool ID'
+      Value:
+        Ref: 'FlavorliCognitoUserPool'
+    FlavorliCognitoUserPoolClientId:
+      Description: 'Flavorli Cognito User Pool Client ID'
+      Value:
+        Ref: 'FlavorliCognitoUserPoolClient'
