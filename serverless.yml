@@ -108,7 +108,7 @@ resources:
             Required: true
         SmsConfiguration:
           ExternalId: 'generate-your-own-uuid-here'
-          SnsCallerArn: !GetAtt FlavorliLambdaRole.Arn
+          SnsCallerArn: !GetAtt FlavorliCognitoUserPoolRole.Arn
 
     FlavorliCognitoUserPoolClient:
       Type: AWS::Cognito::UserPoolClient
@@ -117,6 +117,26 @@ resources:
         GenerateSecret: false
         UserPoolId:
           Ref: 'FlavorliCognitoUserPool'
+
+    FlavorliCognitoIdentityPool:
+      Type: AWS::Cognito::IdentityPool
+      Properties:
+        IdentityPoolName: ${self:custom.prefix}-identityPool
+        AllowUnauthenticatedIdentities: false
+        CognitoIdentityProviders:
+          - ClientId:
+              Ref: FlavorliCognitoUserPoolClient
+            ProviderName:
+              Fn::GetAtt: ['FlavorliCognitoUserPool', 'ProviderName']
+
+    FlavorliCognitoIdentityPoolRoles:
+      Type: AWS::Cognito::IdentityPoolRoleAttachment
+      Properties:
+        IdentityPoolId:
+          Ref: FlavorliCognitoIdentityPool
+        Roles:
+          authenticated:
+            Fn::GetAtt: [FlavorliCognitoAuthRole, Arn]
 
     RecipeTable:
       Type: AWS::DynamoDB::Table
@@ -156,12 +176,7 @@ resources:
               Principal:
                 Service:
                   - lambda.amazonaws.com
-                  - cognito-idp.amazonaws.com
               Action: sts:AssumeRole
-              Condition:
-                StringEquals:
-                  sts:ExternalId:
-                    - 'generate-your-own-uuid-here'
         Policies:
           - PolicyName: 'Dynamo-ServiceRole-Policy'
             PolicyDocument:
@@ -180,6 +195,24 @@ resources:
                   Resource:
                     - !GetAtt RecipeTable.Arn
                     - !GetAtt UserTable.Arn
+
+    FlavorliCognitoUserPoolRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: ${self:custom.prefix}-userPool
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Principal:
+                Service:
+                  - cognito-idp.amazonaws.com
+              Action: sts:AssumeRole
+              Condition:
+                StringEquals:
+                  sts:ExternalId:
+                    - 'generate-your-own-uuid-here'
+        Policies:
           - PolicyName: 'Sns-ServiceRole-Policy'
             PolicyDocument:
               Version: '2012-10-17'
@@ -189,6 +222,37 @@ resources:
                     - 'sns:*'
                   Resource:
                     - '*'
+
+    FlavorliCognitoAuthRole:
+      Type: AWS::IAM::Role
+      Properties:
+        Path: /
+        RoleName: ${self:custom.prefix}-cognitoAuthRole
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: 'Allow'
+              Principal:
+                Federated: 'cognito-identity.amazonaws.com'
+              Action:
+                - 'sts:AssumeRoleWithWebIdentity'
+              Condition:
+                StringEquals:
+                  'cognito-identity.amazonaws.com:aud':
+                    Ref: FlavorliCognitoIdentityPool
+                'ForAnyValue:StringLike':
+                  'cognito-identity.amazonaws.com:amr': authenticated
+        Policies:
+          - PolicyName: 'CognitoAuthorizedPolicy'
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: 'Allow'
+                  Action:
+                    - 'mobileanalytics:PutEvents'
+                    - 'cognito-sync:*'
+                    - 'cognito-identity:*'
+                  Resource: '*'
 
     FlavorliApiGatewayAuthorizer:
       Type: AWS::ApiGateway::Authorizer
@@ -214,3 +278,7 @@ resources:
       Description: 'Flavorli Cognito User Pool Client ID'
       Value:
         Ref: 'FlavorliCognitoUserPoolClient'
+    FlavorliCognitoIdentityPoolId:
+      Description: 'Flavorli Cognito Identity Pool ID'
+      Value:
+        Ref: 'FlavorliCognitoIdentityPool'
