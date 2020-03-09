@@ -69,7 +69,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/flavorli/staging/1582402087093-2020-02-22T20:08:07.093Z/flavorli.zip"
+          "S3Key": "serverless/flavorli/staging/1583748755723-2020-03-09T10:12:35.723Z/flavorli.zip"
         },
         "FunctionName": "flavorli-staging-graphql",
         "Handler": "dist/index.graphqlHandler",
@@ -96,14 +96,14 @@
         "FlavorliLambdaRole"
       ]
     },
-    "GraphqlLambdaVersionbFIb3FJuCA8vwZFAHgXpZOrUzjZnBUI31VjS3SBO6E": {
+    "GraphqlLambdaVersionqsrz8UZu6D5To2bCoURMjx5eDTZlT2iWcmQHTkwBM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GraphqlLambdaFunction"
         },
-        "CodeSha256": "6WzLQCnrWK89OycXE0ok5A8ZYSk72nkkow67UaADvos="
+        "CodeSha256": "i+wxyutZfT4L7y4rpH0nrxjCu3SFdD31brfVHVXHIaI="
       }
     },
     "ApiGatewayRestApi": {
@@ -190,10 +190,7 @@
           "Ref": "ApiGatewayRestApi"
         },
         "ApiKeyRequired": false,
-        "AuthorizationType": "COGNITO_USER_POOLS",
-        "AuthorizerId": {
-          "Ref": "FlavorliApiGatewayAuthorizer"
-        },
+        "AuthorizationType": "NONE",
         "Integration": {
           "IntegrationHttpMethod": "POST",
           "Type": "AWS_PROXY",
@@ -236,10 +233,7 @@
           "Ref": "ApiGatewayRestApi"
         },
         "ApiKeyRequired": false,
-        "AuthorizationType": "COGNITO_USER_POOLS",
-        "AuthorizerId": {
-          "Ref": "FlavorliApiGatewayAuthorizer"
-        },
+        "AuthorizationType": "NONE",
         "Integration": {
           "IntegrationHttpMethod": "POST",
           "Type": "AWS_PROXY",
@@ -270,7 +264,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1582402074541": {
+    "ApiGatewayDeployment1583748742103": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -359,88 +353,6 @@
               }
             }
           ]
-        }
-      }
-    },
-    "FlavorliCognitoUserPool": {
-      "Type": "AWS::Cognito::UserPool",
-      "Properties": {
-        "UserPoolName": "flavorli-eu-west-2-staging-userPool",
-        "AliasAttributes": [
-          "phone_number",
-          "email"
-        ],
-        "AutoVerifiedAttributes": [
-          "phone_number"
-        ],
-        "Schema": [
-          {
-            "Name": "email",
-            "Required": true
-          },
-          {
-            "Name": "gender",
-            "Required": true
-          },
-          {
-            "Name": "phone_number",
-            "Required": true
-          }
-        ],
-        "SmsConfiguration": {
-          "ExternalId": "generate-your-own-uuid-here",
-          "SnsCallerArn": {
-            "Fn::GetAtt": [
-              "FlavorliCognitoUserPoolRole",
-              "Arn"
-            ]
-          }
-        }
-      }
-    },
-    "FlavorliCognitoUserPoolClient": {
-      "Type": "AWS::Cognito::UserPoolClient",
-      "Properties": {
-        "ClientName": "flavorli-eu-west-2-staging-userPoolClient",
-        "GenerateSecret": false,
-        "UserPoolId": {
-          "Ref": "FlavorliCognitoUserPool"
-        }
-      }
-    },
-    "FlavorliCognitoIdentityPool": {
-      "Type": "AWS::Cognito::IdentityPool",
-      "Properties": {
-        "IdentityPoolName": "flavorli-eu-west-2-staging-identityPool",
-        "AllowUnauthenticatedIdentities": false,
-        "CognitoIdentityProviders": [
-          {
-            "ClientId": {
-              "Ref": "FlavorliCognitoUserPoolClient"
-            },
-            "ProviderName": {
-              "Fn::GetAtt": [
-                "FlavorliCognitoUserPool",
-                "ProviderName"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    "FlavorliCognitoIdentityPoolRoles": {
-      "Type": "AWS::Cognito::IdentityPoolRoleAttachment",
-      "Properties": {
-        "IdentityPoolId": {
-          "Ref": "FlavorliCognitoIdentityPool"
-        },
-        "Roles": {
-          "authenticated": {
-            "Fn::GetAtt": [
-              "FlavorliCognitoAuthRole",
-              "Arn"
-            ]
-          }
         }
       }
     },
@@ -544,121 +456,6 @@
           }
         ]
       }
-    },
-    "FlavorliCognitoUserPoolRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "RoleName": "flavorli-eu-west-2-staging-userPool",
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "cognito-idp.amazonaws.com"
-                ]
-              },
-              "Action": "sts:AssumeRole",
-              "Condition": {
-                "StringEquals": {
-                  "sts:ExternalId": [
-                    "generate-your-own-uuid-here"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "Policies": [
-          {
-            "PolicyName": "Sns-ServiceRole-Policy",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "sns:*"
-                  ],
-                  "Resource": [
-                    "*"
-                  ]
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    "FlavorliCognitoAuthRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Path": "/",
-        "RoleName": "flavorli-eu-west-2-staging-cognitoAuthRole",
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Federated": "cognito-identity.amazonaws.com"
-              },
-              "Action": [
-                "sts:AssumeRoleWithWebIdentity"
-              ],
-              "Condition": {
-                "StringEquals": {
-                  "cognito-identity.amazonaws.com:aud": {
-                    "Ref": "FlavorliCognitoIdentityPool"
-                  }
-                },
-                "ForAnyValue:StringLike": {
-                  "cognito-identity.amazonaws.com:amr": "authenticated"
-                }
-              }
-            }
-          ]
-        },
-        "Policies": [
-          {
-            "PolicyName": "CognitoAuthorizedPolicy",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "mobileanalytics:PutEvents",
-                    "cognito-sync:*",
-                    "cognito-identity:*"
-                  ],
-                  "Resource": "*"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    "FlavorliApiGatewayAuthorizer": {
-      "Type": "AWS::ApiGateway::Authorizer",
-      "Properties": {
-        "Name": "flavorli-eu-west-2-staging-authorizer",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        },
-        "Type": "COGNITO_USER_POOLS",
-        "ProviderARNs": [
-          {
-            "Fn::GetAtt": [
-              "FlavorliCognitoUserPool",
-              "Arn"
-            ]
-          }
-        ],
-        "IdentitySource": "method.request.header.Authorization"
-      }
     }
   },
   "Outputs": {
@@ -670,7 +467,7 @@
     "GraphqlLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GraphqlLambdaVersionbFIb3FJuCA8vwZFAHgXpZOrUzjZnBUI31VjS3SBO6E"
+        "Ref": "GraphqlLambdaVersionqsrz8UZu6D5To2bCoURMjx5eDTZlT2iWcmQHTkwBM"
       }
     },
     "ServiceEndpoint": {
@@ -703,24 +500,6 @@
           "FlavorliBucket",
           "WebsiteURL"
         ]
-      }
-    },
-    "FlavorliCognitoUserPoolId": {
-      "Description": "Flavorli Cognito User Pool ID",
-      "Value": {
-        "Ref": "FlavorliCognitoUserPool"
-      }
-    },
-    "FlavorliCognitoUserPoolClientId": {
-      "Description": "Flavorli Cognito User Pool Client ID",
-      "Value": {
-        "Ref": "FlavorliCognitoUserPoolClient"
-      }
-    },
-    "FlavorliCognitoIdentityPoolId": {
-      "Description": "Flavorli Cognito Identity Pool ID",
-      "Value": {
-        "Ref": "FlavorliCognitoIdentityPool"
       }
     }
   }

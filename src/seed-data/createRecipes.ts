@@ -1,23 +1,24 @@
 const jsonfile = require('jsonfile');
-import {Rissoto} from './recipes/broccoli-lemon-mint-risotto';
 import {LentilSoup} from './recipes/Colourful-lentil-soup-3-ways';
-import {ChocolateCake} from './recipes/chocolate-cake';
-import {MacNCheese} from './recipes/mac-n-cheese';
-import {CherryBerrySmoothie} from './recipes/cherry-berry-smoothie';
-import {GreekPastitsio} from './recipes/greek-pastitsio';
-import {BananaChocolateSmoothie} from './recipes/banana-chocolate-smoothie';
-import {VegCurry} from './recipes/veg-curry';
-import {panayiotis} from './users/panayiotis';
+import {SpicyPasta} from './recipes/spicy-pasta';
 
-const recipes = [
-  Rissoto,
+import {panayiotis} from './users/panayiotis';
+import {IRecipe} from 'src/types';
+import {BananaBreadPancakes} from './recipes/banana_bread_pancakes';
+import {PadThai} from './recipes/pad_thai';
+
+const recipes: IRecipe[] = [
+  // Rissoto,
   LentilSoup,
-  ChocolateCake,
-  MacNCheese,
-  CherryBerrySmoothie,
-  GreekPastitsio,
-  BananaChocolateSmoothie,
-  VegCurry,
+  SpicyPasta,
+  BananaBreadPancakes,
+  PadThai,
+  // ChocolateCake,
+  // MacNCheese,
+  // CherryBerrySmoothie,
+  // GreekPastitsio,
+  // BananaChocolateSmoothie,
+  // VegCurry,
 ];
 
 const users = [panayiotis];

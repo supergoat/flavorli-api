@@ -73,6 +73,7 @@ export const schema = `
     createdAt: String
     name: String
     image: String
+    video: String
     preparationTime: Int
     cookingTime: Int
     portions: String
@@ -103,33 +104,27 @@ export const schema = `
   }
 
   type Step {
-    no: Int
-    type: StepType
+    for: String
+    heatLevel: String
+    ovenTemperature: String
     links: [Link]
-    tag: Tag
-    items: [Item]
-    ingredients: [Ingredient]
     tasks: [Task]
-    images: [Image]
-    timer: Timer
     notes: [String]
+    images: [Image]
+    video: String
   }
+
+  type Link{
+    name: String!
+    from: Int!
+    timerId: String
+  }
+
 
   type Task {
     name: String!
     notes: [String]
-  }
-
-  type Link {
-    heading: String
-    name: String!
-    from: String!
-    timerId: String
-  }
-
-  type Tag {
-    text: String!
-    color: String!
+    timer: Timer
   }
 
   type Image {
