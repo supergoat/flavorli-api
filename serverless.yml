@@ -56,32 +56,6 @@ functions:
 
 resources:
   Resources:
-    FlavorliBucket:
-      Type: AWS::S3::Bucket
-      Properties:
-        BucketName: ${self:custom.prefix}-bucket
-        WebsiteConfiguration:
-          IndexDocument: index.html
-          ErrorDocument: index.html
-
-    FlavorliBucketPolicy:
-      Type: AWS::S3::BucketPolicy
-      Properties:
-        Bucket:
-          Ref: 'FlavorliBucket'
-        PolicyDocument:
-          Statement:
-            - Effect: 'Allow'
-              Principal: '*'
-              Action:
-                - 's3:GetObject'
-              Resource:
-                Fn::Join:
-                  - ''
-                  - - 'arn:aws:s3:::'
-                    - Ref: 'FlavorliBucket'
-                    - '/*'
-
     RecipeTable:
       Type: AWS::DynamoDB::Table
       Properties:
@@ -139,9 +113,3 @@ resources:
                   Resource:
                     - !GetAtt RecipeTable.Arn
                     - !GetAtt UserTable.Arn
-
-  Outputs:
-    FlavorliBucketURL:
-      Description: 'FlavorliBucket Website URL'
-      Value:
-        'Fn::GetAtt': [FlavorliBucket, WebsiteURL]
