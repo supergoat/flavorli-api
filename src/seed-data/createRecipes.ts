@@ -6,6 +6,8 @@ import {panayiotis} from './users/panayiotis';
 import {IRecipe} from 'src/types';
 import {BananaBreadPancakes} from './recipes/banana_bread_pancakes';
 import {PadThai} from './recipes/pad_thai';
+import {BananaChocolateSmoothie} from './recipes/banana-chocolate-smoothie';
+import {CherryBerrySmoothie} from './recipes/cherry-berry-smoothie';
 
 const recipes: IRecipe[] = [
   // Rissoto,
@@ -15,9 +17,9 @@ const recipes: IRecipe[] = [
   PadThai,
   // ChocolateCake,
   // MacNCheese,
-  // CherryBerrySmoothie,
+  CherryBerrySmoothie,
   // GreekPastitsio,
-  // BananaChocolateSmoothie,
+  BananaChocolateSmoothie,
   // VegCurry,
 ];
 
