@@ -15,37 +15,42 @@ export const CherryBerrySmoothie: IRecipe = {
   notes: ['This recipe requires a blender'],
   ingredients: [
     {
-      qty: '1',
-      name: 'very ripe banana',
-      notes:
-        'Make sure that the banana is very ripe or the smoothie will not be sweet',
-    },
-    {
-      qty: '1 cup (100 g)',
-      name: 'frozen blueberries',
-    },
-    {
-      qty: '0.5 cup (110 g)',
-      name: 'pitted cherries',
-      notes: 'fresh or frozen ',
-    },
-    {
-      qty: '1 tbsp',
-      name: 'ground flaxseeds (or linseeds)',
-      notes:
-        'Flaxseeds improve regular bowel movements and can improve your digestive health. In addition they can help lower cholesterol and may play an important role in improving heart health. They also lower the risk of strokes',
-    },
-    {
-      qty: '1 tbsp',
-      name: 'almond butter (or peanut butter)',
-    },
-    {
-      qty: '1 cup (22.5 g)',
-      name: 'raw spinach leaves',
-    },
-    {
-      qty: '1.5 cup (360 ml)',
-      name: 'water',
+      for: 'smoothie',
+      list: [
+        {
+          qty: '1',
+          name: 'very ripe banana',
+          notes:
+            'Make sure that the banana is very ripe or the smoothie will not be sweet',
+        },
+        {
+          qty: '1 cup (100 g)',
+          name: 'frozen blueberries',
+        },
+        {
+          qty: '0.5 cup (110 g)',
+          name: 'pitted cherries',
+          notes: 'fresh or frozen ',
+        },
+        {
+          qty: '1 tbsp',
+          name: 'ground flaxseeds (or linseeds)',
+          notes:
+            'Flaxseeds improve regular bowel movements and can improve your digestive health. In addition they can help lower cholesterol and may play an important role in improving heart health. They also lower the risk of strokes',
+        },
+        {
+          qty: '1 tbsp',
+          name: 'almond butter (or peanut butter)',
+        },
+        {
+          qty: '1 cup (22.5 g)',
+          name: 'raw spinach leaves',
+        },
+        {
+          qty: '1.5 cup (360 ml)',
+          name: 'water',
+        },
+      ],
     },
   ],
   items: [

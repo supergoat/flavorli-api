@@ -17,38 +17,57 @@ export const PadThai: IRecipe = {
   difficulty: 'Simple',
   notes: [],
   ingredients: [
-    {qty: '2 tbsp', name: 'sesame oil'},
-    {qty: '1', name: 'large garlic clove'},
-    {qty: '1', name: 'red onion'},
-    {qty: '1/2', name: 'red chilli'},
-    {qty: '1', name: 'broccoli head'},
-    {qty: '1', name: 'bell pepper', notes: 'I use red bell pepper'},
-    {qty: '2 large handfuls', name: 'bean sprouts'},
     {
-      qty: '1 small handful',
-      name: 'unsalted peanuts crushed',
-      notes: 'Some more for serving',
-    },
-    {qty: '1', name: 'lime'},
-    {
-      qty: '150 g',
-      name: 'rice noodles',
-      notes: 'You can also buy it precooked',
-    },
+      for: 'pad thai',
+      list: [
+        {qty: '2 tbsp', name: 'sesame oil'},
+        {qty: '1', name: 'large garlic clove'},
+        {qty: '1', name: 'red onion'},
+        {qty: '1/2', name: 'red chilli'},
+        {qty: '1', name: 'broccoli head'},
+        {qty: '1', name: 'red bell pepper'},
+        {qty: '1 large handful', name: 'bean sprouts'},
+        {
+          qty: '1 small handful',
+          name: 'unsalted peanuts crushed',
+          notes: 'Some more for serving',
+        },
+        {qty: '1', name: 'lime'},
+        {
+          qty: '150 g',
+          name: 'rice noodles',
+          notes: 'You can also buy it precooked',
+        },
 
-    {qty: '1 tsp', name: ' sesame oil'},
-    {qty: '3 tbsp', name: ' maple syrup'},
-    {
-      qty: '3 tbsp',
-      name: ' tamari',
-      notes:
-        "If you can't find tamari, and you are not gluten free you can use soy sauce instead",
+        {qty: '1 tsp', name: ' sesame oil'},
+        {qty: '3 tbsp', name: ' maple syrup'},
+        {
+          qty: '3 tbsp',
+          name: ' tamari',
+          notes:
+            "If you can't find tamari, and you are not gluten free you can use soy sauce instead",
+        },
+        {
+          qty: '1 heaped tsp',
+          name: ' miso paste',
+          notes:
+            "I use brown rice miso. If you can't find miso you can use a bit more tamari",
+        },
+      ],
     },
     {
-      qty: '1 heaped tsp',
-      name: ' miso paste',
-      notes:
-        "I use brown rice miso. If you can't find miso you can use a bit more tamari",
+      for: 'serving',
+      list: [
+        {qty: '1 large handful', name: 'bean sprouts'},
+        {
+          qty: '-',
+          name: 'crushed peanuts',
+        },
+        {
+          qty: '-',
+          name: 'chilli',
+        },
+      ],
     },
   ],
   items: [
@@ -62,7 +81,7 @@ export const PadThai: IRecipe = {
   ],
   steps: [
     {
-      for: 'For the pad thai',
+      for: 'for the pad thai',
       tasks: [
         {name: 'Crush a handful of peanuts and set aside in a pinch bowl'},
       ],
@@ -84,7 +103,7 @@ export const PadThai: IRecipe = {
         'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/pad_thai_mise_en_place_final.mp4#t=16,73',
     },
     {
-      for: 'for the noodles',
+      for: 'for the pad thai',
       heatLevel: 'medium',
       tasks: [
         {name: 'Place a pot of water on medium heat and set aside to boil'},
@@ -173,7 +192,7 @@ export const PadThai: IRecipe = {
         'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/pad_thai_final.mp4#t=7,15',
     },
     {
-      for: 'for the noodles',
+      for: 'for the pad thai',
       heatLevel: 'medium',
       tasks: [
         {
@@ -235,10 +254,10 @@ export const PadThai: IRecipe = {
       ],
       tasks: [
         {
-          name: 'Add the noodles to the pan',
+          name: 'Drain the noodles and add them to the pan',
         },
         {
-          name: 'Stir in to soak up all the sauce',
+          name: 'Stir well until the noodles soak up all the sauce',
         },
         {
           name: 'Remove from the heat',
@@ -251,8 +270,7 @@ export const PadThai: IRecipe = {
       for: 'for serving',
       tasks: [
         {
-          name:
-            'Serve with extra bean sprouts, chilli, lime and crushed peanuts',
+          name: 'Serve with extra bean sprouts, chilli and crushed peanuts',
         },
         {
           name: 'Enjoy',

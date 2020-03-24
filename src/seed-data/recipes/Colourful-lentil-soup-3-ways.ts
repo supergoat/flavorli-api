@@ -20,28 +20,37 @@ export const LentilSoup: IRecipe = {
     "You can try this recipe as is or with a cauliflower topping. If you don't want to have the cauliflower topping you can skip step 1",
   ],
   ingredients: [
-    {qty: '1', name: 'Cauliflower', notes: 'Optional'},
     {
-      qty: '-',
-      name: 'smoked paprika',
-      notes: 'Optional if making with cauliflower',
+      for: 'soup',
+      list: [
+        {qty: '1', name: 'Cauliflower', notes: 'Optional'},
+        {
+          qty: '-',
+          name: 'smoked paprika',
+          notes: 'Optional if making with cauliflower',
+        },
+        {qty: '-', name: 'olive oil'},
+        {
+          qty: '450 g',
+          name: 'potatoes',
+          notes: 'You can also use sweet potatoes',
+        },
+        {qty: '2', name: 'cellery stalks'},
+        {qty: '3-4', name: 'medium carrots'},
+        {qty: '1', name: 'medium/large onion'},
+        {qty: '2', name: 'garlic cloves'},
+        {qty: '2 tbsp', name: 'olive oil'},
+        {qty: '1.5 L', name: 'veg stock'},
+        {
+          qty: '1 cup',
+          name: 'red split lentils',
+          notes:
+            'You can also use other types of lentils. Some lentils take longer to cook (for example brown lentils)',
+        },
+        {qty: '-', name: 'salt', notes: 'to taste'},
+        {qty: '-', name: 'pepper', notes: 'to taste'},
+      ],
     },
-    {qty: '-', name: 'olive oil'},
-    {qty: '450 g', name: 'potatoes', notes: 'You can also use sweet potatoes'},
-    {qty: '2', name: 'cellery stalks'},
-    {qty: '3-4', name: 'medium carrots'},
-    {qty: '1', name: 'medium/large onion'},
-    {qty: '2', name: 'garlic cloves'},
-    {qty: '2 tbsp', name: 'olive oil'},
-    {qty: '1.5 L', name: 'veg stock'},
-    {
-      qty: '1 cup',
-      name: 'red split lentils',
-      notes:
-        'You can also use other types of lentils. Some lentils take longer to cook (for example brown lentils)',
-    },
-    {qty: '-', name: 'salt', notes: 'to taste'},
-    {qty: '-', name: 'pepper', notes: 'to taste'},
   ],
   items: [
     {

@@ -5,7 +5,7 @@
       "name": "flavorli"
     },
     "provider": {
-      "stage": "staging",
+      "stage": "prod",
       "variableSyntax": "\\${([ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)*?]+?)}",
       "name": "aws",
       "runtime": "nodejs12.x",
@@ -73,7 +73,7 @@
           "GraphqlLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/flavorli-staging-graphql"
+              "LogGroupName": "/aws/lambda/flavorli-prod-graphql"
             }
           },
           "GraphqlLambdaFunction": {
@@ -83,9 +83,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/flavorli/staging/1583769697206-2020-03-09T16:01:37.206Z/flavorli.zip"
+                "S3Key": "serverless/flavorli/prod/1584734163958-2020-03-20T19:56:03.958Z/flavorli.zip"
               },
-              "FunctionName": "flavorli-staging-graphql",
+              "FunctionName": "flavorli-prod-graphql",
               "Handler": "dist/index.graphqlHandler",
               "MemorySize": 1024,
               "Role": {
@@ -99,9 +99,9 @@
               "Environment": {
                 "Variables": {
                   "DYNAMODB_PORT": 8000,
-                  "STAGE": "staging",
-                  "RECIPE_TABLE": "flavorli-eu-west-2-staging-Recipes",
-                  "USERS_TABLE": "flavorli-eu-west-2-staging-Users"
+                  "STAGE": "prod",
+                  "RECIPE_TABLE": "flavorli-eu-west-2-prod-Recipes",
+                  "USERS_TABLE": "flavorli-eu-west-2-prod-Users"
                 }
               }
             },
@@ -110,20 +110,20 @@
               "FlavorliLambdaRole"
             ]
           },
-          "GraphqlLambdaVersionz2pXVHUtXEOyq9BHaVkPIAfTLk2Hob4cq0jIAUIY": {
+          "GraphqlLambdaVersiongghe4bvjRJNOuX5XFQ2RZYH1PPP6DWMQVcBvsqZE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GraphqlLambdaFunction"
               },
-              "CodeSha256": "P3+rQwf1WMrM28xZ3GQgoVYMhAlKicea6yXpQFzD0rs="
+              "CodeSha256": "We6dTKl/8vRzJhgKwLlPMkiQWOG3U0Zaj7oZKzKTJv8="
             }
           },
           "ApiGatewayRestApi": {
             "Type": "AWS::ApiGateway::RestApi",
             "Properties": {
-              "Name": "staging-flavorli",
+              "Name": "prod-flavorli",
               "EndpointConfiguration": {
                 "Types": [
                   "EDGE"
@@ -278,13 +278,13 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1583769684108": {
+          "ApiGatewayDeployment1584734151484": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "StageName": "staging"
+              "StageName": "prod"
             },
             "DependsOn": [
               "ApiGatewayMethodGraphqlOptions",
@@ -332,7 +332,7 @@
           "RecipeTable": {
             "Type": "AWS::DynamoDB::Table",
             "Properties": {
-              "TableName": "flavorli-eu-west-2-staging-Recipes",
+              "TableName": "flavorli-eu-west-2-prod-Recipes",
               "AttributeDefinitions": [
                 {
                   "AttributeName": "id",
@@ -354,7 +354,7 @@
           "UserTable": {
             "Type": "AWS::DynamoDB::Table",
             "Properties": {
-              "TableName": "flavorli-eu-west-2-staging-Users",
+              "TableName": "flavorli-eu-west-2-prod-Users",
               "AttributeDefinitions": [
                 {
                   "AttributeName": "id",
@@ -376,7 +376,7 @@
           "FlavorliLambdaRole": {
             "Type": "AWS::IAM::Role",
             "Properties": {
-              "RoleName": "flavorli-eu-west-2-staging-lambda",
+              "RoleName": "flavorli-eu-west-2-prod-lambda",
               "AssumeRolePolicyDocument": {
                 "Version": "2012-10-17",
                 "Statement": [
@@ -440,7 +440,7 @@
           "GraphqlLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GraphqlLambdaVersionz2pXVHUtXEOyq9BHaVkPIAfTLk2Hob4cq0jIAUIY"
+              "Ref": "GraphqlLambdaVersiongghe4bvjRJNOuX5XFQ2RZYH1PPP6DWMQVcBvsqZE"
             }
           },
           "ServiceEndpoint": {
@@ -461,7 +461,7 @@
                   {
                     "Ref": "AWS::URLSuffix"
                   },
-                  "/staging"
+                  "/prod"
                 ]
               ]
             }
@@ -556,13 +556,13 @@
           "test": {
             "sources": [
               {
-                "table": "flavorli-eu-west-2-staging-Recipes",
+                "table": "flavorli-eu-west-2-prod-Recipes",
                 "sources": [
                   "src/seed-data/Recipes.json"
                 ]
               },
               {
-                "table": "flavorli-eu-west-2-staging-Users",
+                "table": "flavorli-eu-west-2-prod-Users",
                 "sources": [
                   "src/seed-data/Users.json"
                 ]
@@ -571,10 +571,10 @@
           }
         }
       },
-      "prefix": "flavorli-eu-west-2-staging",
+      "prefix": "flavorli-eu-west-2-prod",
       "tableNames": {
-        "recipes": "flavorli-eu-west-2-staging-Recipes",
-        "users": "flavorli-eu-west-2-staging-Users"
+        "recipes": "flavorli-eu-west-2-prod-Recipes",
+        "users": "flavorli-eu-west-2-prod-Users"
       }
     },
     "plugins": [
@@ -642,17 +642,17 @@
         ],
         "environment": {
           "DYNAMODB_PORT": 8000,
-          "STAGE": "staging",
-          "RECIPE_TABLE": "flavorli-eu-west-2-staging-Recipes",
-          "USERS_TABLE": "flavorli-eu-west-2-staging-Users"
+          "STAGE": "prod",
+          "RECIPE_TABLE": "flavorli-eu-west-2-prod-Recipes",
+          "USERS_TABLE": "flavorli-eu-west-2-prod-Users"
         },
-        "name": "flavorli-staging-graphql",
+        "name": "flavorli-prod-graphql",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GraphqlLambdaVersionz2pXVHUtXEOyq9BHaVkPIAfTLk2Hob4cq0jIAUIY"
+        "versionLogicalId": "GraphqlLambdaVersiongghe4bvjRJNOuX5XFQ2RZYH1PPP6DWMQVcBvsqZE"
       }
     },
     "resources": {
@@ -660,7 +660,7 @@
         "RecipeTable": {
           "Type": "AWS::DynamoDB::Table",
           "Properties": {
-            "TableName": "flavorli-eu-west-2-staging-Recipes",
+            "TableName": "flavorli-eu-west-2-prod-Recipes",
             "AttributeDefinitions": [
               {
                 "AttributeName": "id",
@@ -682,7 +682,7 @@
         "UserTable": {
           "Type": "AWS::DynamoDB::Table",
           "Properties": {
-            "TableName": "flavorli-eu-west-2-staging-Users",
+            "TableName": "flavorli-eu-west-2-prod-Users",
             "AttributeDefinitions": [
               {
                 "AttributeName": "id",
@@ -704,7 +704,7 @@
         "FlavorliLambdaRole": {
           "Type": "AWS::IAM::Role",
           "Properties": {
-            "RoleName": "flavorli-eu-west-2-staging-lambda",
+            "RoleName": "flavorli-eu-west-2-prod-lambda",
             "AssumeRolePolicyDocument": {
               "Version": "2012-10-17",
               "Statement": [
@@ -766,7 +766,7 @@
     "artifact": "/Users/panayiotis/flavorli-api/.serverless/flavorli.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/flavorli/staging/1583769697206-2020-03-09T16:01:37.206Z",
+    "artifactDirectoryName": "serverless/flavorli/prod/1584734163958-2020-03-20T19:56:03.958Z",
     "artifact": "flavorli.zip"
   }
 }

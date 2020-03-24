@@ -10,7 +10,7 @@ export const SpicyPasta: IRecipe = {
   author: 'James Wythe',
   name: '10 Minute spicy pasta',
   video:
-    'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/spicy_pasta_final.mp4#t=4,',
+    'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/spicy_pasta_final.mp4#t=4,89',
   image: 'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/spicy_pasta.png',
   preparationTime: 5,
   cookingTime: 10,
@@ -18,21 +18,32 @@ export const SpicyPasta: IRecipe = {
   difficulty: 'Simple',
   notes: [],
   ingredients: [
-    {qty: '250 g', name: 'pasta'},
-    {qty: '3 tbsp', name: 'olive oil'},
-    {qty: '250 g', name: 'cherry tomatoes'},
-    {qty: 'hanful', name: 'olives'},
-    {qty: '4', name: 'large garlic cloves'},
-    {qty: 'pinch', name: 'chilli flakes'},
-    {qty: '1 tsp', name: 'paprika'},
-    {qty: 'handful', name: 'fresh basil'},
+    {
+      for: 'pasta',
+      list: [
+        {qty: '250 g', name: 'pasta'},
+        {qty: '3 tbsp', name: 'olive oil'},
+        {qty: '250 g', name: 'cherry tomatoes'},
+        {qty: 'hanful', name: 'olives'},
+        {qty: '4', name: 'large garlic cloves'},
+        {qty: 'pinch', name: 'chilli flakes'},
+        {qty: '1 tsp', name: 'paprika'},
+        {qty: 'handful', name: 'fresh basil'},
+      ],
+    },
+    {
+      for: 'serving',
+      list: [{qty: '-', name: 'fresh basil'}],
+    },
   ],
   items: [
     {
       qty: '1',
       name: 'chopping board',
     },
-    {qty: '1', name: 'Pot', notes: 'large enough to hold 250 g pasta'},
+    {qty: '1', name: 'pinch bowl', notes: 'for the spices'},
+
+    {qty: '1', name: 'pot', notes: 'large enough to hold 250 g pasta'},
     {
       qty: '1',
       name: 'sauce pan',
@@ -43,12 +54,8 @@ export const SpicyPasta: IRecipe = {
       notes: 'Optional. To transfer the pasta to the sauce',
     },
     {
-      qty: '1',
-      name: 'tsp',
-    },
-    {
-      qty: '1',
-      name: 'tbsp',
+      qty: '-',
+      name: 'measuring spoons',
     },
   ],
   steps: [
@@ -62,13 +69,13 @@ export const SpicyPasta: IRecipe = {
       ],
     },
     {
-      for: 'for the sauce',
+      for: 'for the pasta',
       tasks: [{name: 'Chop a handful of olives'}],
       video:
         'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/spicy_pasta_mise_en_place.mp4#t=2,37',
     },
     {
-      for: 'for the sauce',
+      for: 'for the pasta',
       heatLevel: 'medium',
       tasks: [
         {name: 'Place a sauce pan over medium heat'},
@@ -99,7 +106,7 @@ export const SpicyPasta: IRecipe = {
         'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/spicy_pasta_final.mp4#t=4,19',
     },
     {
-      for: 'for the sauce',
+      for: 'for the pasta',
       tasks: [
         {
           name: 'Meanwhile crush 4 large garlic cloves and set aside',
@@ -110,10 +117,26 @@ export const SpicyPasta: IRecipe = {
         'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/spicy_pasta_mise_en_place.mp4#t=38,52',
     },
     {
-      for: 'for the sauce',
+      for: 'for the pasta',
+      tasks: [
+        {
+          name: 'In a pinch bowl, add 1 tsp of paprika',
+          notes: ['You will no longer need the tsp'],
+        },
+        {
+          name: 'Add 1/2 tsp of chilli flakes and set aside',
+          notes: [
+            'You can add more or less chilli flakes, depending on how spicy you want the sauce',
+            'You will no longer need the 1/2 tsp',
+          ],
+        },
+      ],
+    },
+    {
+      for: 'for the pasta',
       links: [
         {
-          from: 3,
+          from: 4,
           name: 'Fried tomatoes',
           timerId: timerOneId,
         },
@@ -123,30 +146,23 @@ export const SpicyPasta: IRecipe = {
           name: 'Add the crushed garlic cloves to the pan',
         },
         {
-          name: 'Add 1 tsp of paprika',
+          name: 'Add the spices',
           notes: ['You will no longer need the tsp'],
-        },
-        {
-          name: 'Add 1/2 tsp of chilli flakes',
-          notes: [
-            'You can add more or less chilli flakes, depending on how spicy you want the sauce',
-            'You will no longer need the 1/2 tsp',
-          ],
         },
       ],
       video:
         'https://flavorli-bucket-2.s3.eu-west-2.amazonaws.com/spicy_pasta_final.mp4#t=20,29',
     },
     {
-      for: 'for the sauce',
-      heatLevel: 'low',
+      for: 'for the pasta',
+      heatLevel: 'mediumLow',
       tasks: [
         {
           name: 'Using a fork pinch and squash the tomatoes',
         },
         {
           name:
-            'Mix well and set aside to simmer over low heat for approximately 10 minutes',
+            'Mix well and set aside to simmer over medium/low heat for approximately 10 minutes',
           timer: {
             id: timerTwoId,
             name: 'Simmer sauce',
@@ -161,11 +177,11 @@ export const SpicyPasta: IRecipe = {
     },
     {
       for: 'for the pasta',
-      heatLevel: 'medium',
+      heatLevel: 'mediumHigh',
       tasks: [
         {name: 'In the pot with boiling water, add salt'},
         {name: 'Add 250 g pasta'},
-        {name: 'Reduce the heat to medium'},
+        {name: 'Reduce the heat to medium/high'},
         {
           name:
             'Boil for approximately ten minutes until the pasta is al dente',
@@ -179,7 +195,7 @@ export const SpicyPasta: IRecipe = {
       ],
     },
     {
-      for: 'for the sauce',
+      for: 'for the pasta',
       links: [
         {
           from: 6,

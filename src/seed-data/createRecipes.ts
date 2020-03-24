@@ -8,6 +8,14 @@ import {BananaBreadPancakes} from './recipes/banana_bread_pancakes';
 import {PadThai} from './recipes/pad_thai';
 import {BananaChocolateSmoothie} from './recipes/banana-chocolate-smoothie';
 import {CherryBerrySmoothie} from './recipes/cherry-berry-smoothie';
+import {GreekPastitsio} from './recipes/greek-pastitsio';
+import {MacNCheese} from './recipes/mac-n-cheese';
+import {VegCurry} from './recipes/veg-curry';
+import {CauliflowerSteaks} from './recipes/cauliflower_steaks';
+import {VegetableBroth} from './recipes/vegetable_broth';
+import {ChocolateCherryBananaSoftServe} from './recipes/chocolate-cherry-banana soft-serve';
+import {WholeRoastedCauliflower} from './recipes/whole-roasted-cauliflower-lemon-tahini-sauce';
+import {ChocolateCake} from './recipes/chocolate-cake';
 
 const recipes: IRecipe[] = [
   // Rissoto,
@@ -15,12 +23,17 @@ const recipes: IRecipe[] = [
   SpicyPasta,
   BananaBreadPancakes,
   PadThai,
-  // ChocolateCake,
-  // MacNCheese,
+
+  ChocolateCherryBananaSoftServe,
+  MacNCheese,
   CherryBerrySmoothie,
-  // GreekPastitsio,
+  GreekPastitsio,
   BananaChocolateSmoothie,
-  // VegCurry,
+  VegCurry,
+  CauliflowerSteaks,
+  VegetableBroth,
+  WholeRoastedCauliflower,
+  ChocolateCake,
 ];
 
 const users = [panayiotis];

@@ -15,47 +15,44 @@ export const BananaBreadPancakes: IRecipe = {
   difficulty: 'Simple',
   notes: [],
   ingredients: [
-    {qty: '2', name: 'ripe bananas'},
-    {qty: '1 tsp', name: 'cinnamon'},
-    {qty: '1 tsp', name: 'baking powder'},
     {
-      qty: '100 g (3/4 cup)',
-      name: 'flour',
-      notes: 'I use gluten free self-raising flour',
+      for: 'batter',
+      list: [
+        {
+          qty: '2',
+          name: 'ripe bananas',
+          notes: 'Ripe bananas will make the pancakes sweeter',
+        },
+        {qty: '1 tsp', name: 'cinnamon'},
+        {qty: '1 tsp', name: 'baking powder'},
+        {
+          qty: '100 g (3/4 cup)',
+          name: 'flour',
+          notes: 'I use gluten free self-raising flour',
+        },
+        {qty: '1 tbsp', name: 'maple syrup'},
+        {
+          qty: '140-150 ml',
+          name: 'plant based milk',
+          notes: 'I use unsweetened almond',
+        },
+        {qty: '25 g', name: 'Chocolate', notes: 'Optional'},
+      ],
     },
-    {qty: '1 tbsp', name: 'maple syrup'},
     {
-      qty: '140-150 ml',
-      name: 'plant based milk',
-      notes: 'I use unsweetened almond',
+      for: 'frying',
+      list: [{qty: '-', name: 'Oil', notes: 'For frying. I use coconut oil'}],
     },
-    {qty: '25 g', name: 'Chocolate', notes: 'Optional'},
-    {qty: '-', name: 'Oil', notes: 'For frying. I use coconut oil'},
   ],
   items: [
     {qty: '1', name: 'large bowl', notes: 'For the batter'},
     {qty: '1', name: 'Hand whisk'},
     {
-      qty: '1',
-      name: 'measuring jar',
-      notes: 'for the milk',
+      qty: '-',
+      name: 'mesuring spoons',
     },
     {
-      qty: '1',
-      name: 'small bowl',
-      notes:
-        'Optional. To hold the flour. You can also add it directly to the batter',
-    },
-    {
-      qty: '1',
-      name: 'tsp',
-    },
-    {
-      qty: '1',
-      name: 'tbsp',
-    },
-    {
-      qty: '1',
+      qty: '-',
       name: '1/4 measuring cup',
       notes: 'I use this to pour the pancake mix',
     },
@@ -65,19 +62,6 @@ export const BananaBreadPancakes: IRecipe = {
     },
   ],
   steps: [
-    {
-      for: 'for the batter',
-      tasks: [
-        {
-          name:
-            'In a measuring jar, add 140 - 150 ml plant based milk and set aside',
-        },
-        {
-          name: 'In a bowl add 100 g flour and set aside',
-          notes: ['You will no longer need the scale'],
-        },
-      ],
-    },
     {
       for: 'for the batter',
       tasks: [
@@ -106,17 +90,17 @@ export const BananaBreadPancakes: IRecipe = {
           notes: ['You will no longer need the tsp'],
         },
         {
-          name: 'Add the flour',
+          name: 'Add 100 g flour',
         },
         {
           name: 'Add 1 tbsp maple syrup',
           notes: ['You will no longer need the tbsp'],
         },
         {
-          name: 'Add the plant based milk',
+          name: 'Add 140 - 150 ml plant based milk',
         },
         {
-          name: 'Then, using a hand whisk, mix well',
+          name: 'Whisk the ingredients until well combined',
           notes: ['You will no longer need the hand whisk'],
         },
       ],

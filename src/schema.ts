@@ -85,6 +85,11 @@ export const schema = `
   }
 
   type Ingredient {
+    for: String
+    list: [IngredientItem]
+  }
+
+  type IngredientItem {
     qty: String
     name: String
     notes: String
